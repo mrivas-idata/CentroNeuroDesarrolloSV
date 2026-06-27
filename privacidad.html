@@ -1,0 +1,810 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidad y Protección de Datos — Centro Neurodesarrollo San Vicente</title>
+  <meta name="description" content="Política de privacidad y protección de datos personales del Centro Neurodesarrollo San Vicente. Conozca sus derechos ARCO y cómo ejercerlos.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+  <style>
+    /* Estilos específicos para la página de privacidad */
+    .policy-body { font-size: .9375rem; line-height: 1.8; color: #2D3748; }
+    .policy-section { padding-top: 2rem; padding-bottom: 1rem; border-bottom: 1px solid #EDF2F7; }
+    .policy-section:last-child { border-bottom: none; }
+    .policy-section h2 { font-family: var(--font-heading); color: var(--color-primary-dark); font-size: 1.35rem; margin-bottom: 1rem; }
+    .policy-section h3 { font-family: var(--font-body); font-size: 1rem; font-weight: 700; color: var(--color-heading); margin-top: 1.25rem; margin-bottom: .5rem; }
+    .policy-section p, .policy-section li { color: #4A5568; }
+    .policy-section ul { padding-left: 1.25rem; }
+    .policy-section ul li { margin-bottom: .375rem; }
+
+    /* Tarjeta ARCO */
+    .arco-card {
+      border-radius: 1rem;
+      border: 2px solid transparent;
+      padding: 1.5rem;
+      height: 100%;
+      transition: transform .25s, box-shadow .25s, border-color .25s;
+      background: white;
+    }
+    .arco-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(90,123,90,.15); border-color: var(--color-primary-light); }
+    .arco-letter {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700;
+      color: white; margin-bottom: 1rem; flex-shrink: 0;
+    }
+    .arco-card h5 { font-family: var(--font-body); font-size: 1rem; font-weight: 700; margin-bottom: .5rem; }
+    .arco-card p  { font-size: .875rem; color: #4A5568; margin-bottom: 0; line-height: 1.6; }
+
+    /* Steps para ejercer derechos */
+    .step-item { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.25rem; }
+    .step-num {
+      width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
+      background: var(--color-primary); color: white;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: .875rem; font-family: var(--font-body);
+    }
+    .step-item h6 { font-family: var(--font-body); font-size: .9375rem; font-weight: 600; margin-bottom: .25rem; }
+    .step-item p  { font-size: .875rem; color: #4A5568; margin-bottom: 0; }
+
+    /* Tabla de datos */
+    .data-table th { font-family: var(--font-body); font-weight: 600; font-size: .875rem; background: var(--color-primary-xlight); color: var(--color-primary-dark); border: none; }
+    .data-table td { font-size: .875rem; color: #4A5568; vertical-align: middle; border-color: #EDF2F7; }
+
+    /* Índice lateral sticky */
+    .toc-nav { position: sticky; top: 80px; }
+    .toc-nav .toc-link { display: block; padding: .375rem .75rem; font-size: .8125rem; color: #718096; text-decoration: none; border-left: 2px solid #E2E8F0; transition: all .2s; font-family: var(--font-body); }
+    .toc-nav .toc-link:hover, .toc-nav .toc-link.active { color: var(--color-primary); border-left-color: var(--color-primary); background: var(--color-primary-xlight); }
+
+    /* Alerta datos sensibles */
+    .sensitive-alert { background: #FFF5F5; border: 1px solid #FED7D7; border-radius: .75rem; padding: 1.25rem 1.5rem; }
+    .sensitive-alert .bi { color: #C8877C; }
+
+    /* Badge base legal */
+    .law-badge { display: inline-flex; align-items: center; gap: .375rem; background: var(--color-primary-xlight); color: var(--color-primary-dark); border-radius: 50px; padding: .25rem .875rem; font-size: .8rem; font-weight: 600; font-family: var(--font-body); }
+
+    /* Última actualización */
+    .last-updated { font-size: .8125rem; color: #718096; font-family: var(--font-body); }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="top-bar" id="topBar">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-3">
+        <a href="tel:+56942488769" class="top-bar-link"><i class="bi bi-telephone-fill"></i>+56 9 4248 8769</a>
+        <span class="top-bar-sep d-none d-sm-inline">·</span>
+        <a href="https://www.instagram.com/centroneuro.cv" class="top-bar-link d-none d-sm-inline-flex" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i>@centroneuro.cv</a>
+        <span class="top-bar-sep d-none d-md-inline">·</span>
+        <a href="https://www.facebook.com/profile.php?id=61574772495186" class="top-bar-link d-none d-md-inline-flex" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i>Facebook</a>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <span class="top-bar-text d-none d-md-inline-flex"><i class="bi bi-clock"></i>Lun–Vie 8:30–20:00 · Sáb 8:30–14:00</span>
+        <a href="https://wa.me/56942488769?text=Hola%2C%20quisiera%20agendar%20una%20consulta" class="top-bar-cta" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i>WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand py-1" href="index.html">
+      <img src="assets/img/Logo.jpg" alt="Centro Neurodesarrollo San Vicente" class="navbar-logo">
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Abrir menú">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav mx-auto gap-1 py-2 py-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html" data-page="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="servicios.html" data-page="servicios.html">Servicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="equipo.html" data-page="equipo.html">Equipo Profesional</a></li>
+        <li class="nav-item"><a class="nav-link" href="nuestro-centro.html" data-page="nuestro-centro.html">Nuestro Centro</a></li>
+        <li class="nav-item"><a class="nav-link" href="talleres.html" data-page="talleres.html">Talleres</a></li>
+        <li class="nav-item"><a class="nav-link" href="noticias.html" data-page="noticias.html">Noticias</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html" data-page="contacto.html">Contacto</a></li>
+      </ul>
+      <a href="https://wa.me/56942488769?text=Hola%2C%20quisiera%20agendar%20una%20consulta"
+         class="btn btn-primary rounded-pill px-4 mt-2 mt-lg-0" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-calendar2-check me-2"></i>Agendar consulta
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container position-relative" style="z-index:1">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+        <li class="breadcrumb-item active">Política de Privacidad</li>
+      </ol>
+    </nav>
+    <div class="row align-items-end g-4">
+      <div class="col-lg-8">
+        <div class="hero-badge mb-3"><i class="bi bi-shield-lock-fill"></i> Protección de datos personales</div>
+        <h1 class="display-5 fw-bold mb-3">Política de Privacidad</h1>
+        <p class="lead mb-0">
+          Centro Neurodesarrollo San Vicente se compromete a proteger su privacidad y tratar sus datos personales con total transparencia, seguridad y respeto a sus derechos.
+        </p>
+      </div>
+      <div class="col-lg-4 d-none d-lg-block text-end">
+        <div class="d-flex flex-column gap-2 align-items-end">
+          <span class="law-badge"><i class="bi bi-file-earmark-text"></i>Ley 19.628</span>
+          <span class="law-badge"><i class="bi bi-file-earmark-text"></i>Ley 21.719</span>
+          <span class="law-badge"><i class="bi bi-file-earmark-medical"></i>Ley 20.584</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-5">
+
+      <!-- ÍNDICE LATERAL -->
+      <div class="col-lg-3 d-none d-lg-block">
+        <nav class="toc-nav" aria-label="Índice de contenidos">
+          <p class="fw-bold small text-uppercase mb-2" style="color:var(--color-primary);letter-spacing:.06em">Contenido</p>
+          <a class="toc-link" href="#responsable">1. Responsable del tratamiento</a>
+          <a class="toc-link" href="#datos-recopilados">2. Datos que recopilamos</a>
+          <a class="toc-link" href="#finalidad">3. Finalidad del tratamiento</a>
+          <a class="toc-link" href="#base-legal">4. Base legal</a>
+          <a class="toc-link" href="#datos-sensibles">5. Datos de salud</a>
+          <a class="toc-link" href="#conservacion">6. Conservación</a>
+          <a class="toc-link" href="#terceros">7. Compartir con terceros</a>
+          <a class="toc-link" href="#derechos-arco">8. Sus derechos ARCO</a>
+          <a class="toc-link" href="#como-ejercer">9. Cómo ejercer sus derechos</a>
+          <a class="toc-link" href="#menores">10. Menores de edad</a>
+          <a class="toc-link" href="#seguridad">11. Seguridad</a>
+          <a class="toc-link" href="#cambios">12. Cambios en la política</a>
+          <a class="toc-link" href="#contacto-dpo">13. Contacto</a>
+          <hr class="my-3">
+          <a href="https://wa.me/56942488769?text=Hola%2C%20quiero%20ejercer%20mis%20derechos%20ARCO"
+             class="btn btn-accent btn-sm rounded-pill w-100 mt-1" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-shield-check me-1"></i>Ejercer mis derechos
+          </a>
+        </nav>
+      </div>
+
+      <!-- CONTENIDO PRINCIPAL -->
+      <div class="col-lg-9 policy-body">
+
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-4 pb-3 border-bottom">
+          <span class="last-updated"><i class="bi bi-calendar3 me-1"></i>Última actualización: mayo de 2025</span>
+          <a href="#derechos-arco" class="btn btn-sm btn-outline-primary rounded-pill">
+            <i class="bi bi-arrow-down me-1"></i>Ir a mis derechos ARCO
+          </a>
+        </div>
+
+        <!-- 1. RESPONSABLE -->
+        <div class="policy-section" id="responsable">
+          <h2><span class="me-2" style="color:var(--color-accent)">01.</span>Responsable del tratamiento de datos</h2>
+          <p>El responsable del tratamiento de sus datos personales es:</p>
+          <div class="card border-0 rounded-4 p-4 mb-3" style="background:var(--color-primary-xlight)">
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <p class="small fw-bold mb-1" style="color:var(--color-primary)">Nombre o razón social</p>
+                <p class="mb-0">Centro Neurodesarrollo San Vicente</p>
+              </div>
+              <div class="col-sm-6">
+                <p class="small fw-bold mb-1" style="color:var(--color-primary)">Ubicación</p>
+                <p class="mb-0">San Vicente de Tagua Tagua, Región del Libertador General Bernardo O'Higgins, Chile</p>
+              </div>
+              <div class="col-sm-6">
+                <p class="small fw-bold mb-1" style="color:var(--color-primary)">Teléfono de contacto</p>
+                <p class="mb-0"><a href="tel:+56942488769">+56 9 4248 8769</a></p>
+              </div>
+              <div class="col-sm-6">
+                <p class="small fw-bold mb-1" style="color:var(--color-primary)">Instagram</p>
+                <p class="mb-0"><a href="https://www.instagram.com/centroneuro.cv" target="_blank" rel="noopener noreferrer">@centroneuro.cv</a></p>
+              </div>
+            </div>
+          </div>
+          <p>Para cualquier consulta relacionada con el tratamiento de sus datos personales o el ejercicio de sus derechos, puede contactarnos a través de los medios indicados en la <a href="#contacto-dpo">sección 13</a> de esta política.</p>
+        </div>
+
+        <!-- 2. DATOS RECOPILADOS -->
+        <div class="policy-section" id="datos-recopilados">
+          <h2><span class="me-2" style="color:var(--color-accent)">02.</span>Datos personales que recopilamos</h2>
+          <p>Recopilamos únicamente los datos personales necesarios para los fines descritos en esta política. Los datos que podemos tratar son:</p>
+
+          <h3>2.1 Datos proporcionados directamente por usted</h3>
+          <div class="table-responsive mb-3">
+            <table class="table data-table rounded-4 overflow-hidden">
+              <thead>
+                <tr>
+                  <th style="width:30%">Categoría</th>
+                  <th style="width:40%">Tipos de datos</th>
+                  <th>Cómo los recopilamos</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Identificación</strong></td>
+                  <td>Nombre completo</td>
+                  <td>Formulario de contacto, agendamiento</td>
+                </tr>
+                <tr>
+                  <td><strong>Contacto</strong></td>
+                  <td>Teléfono, correo electrónico</td>
+                  <td>Formulario de contacto, WhatsApp</td>
+                </tr>
+                <tr>
+                  <td><strong>Salud (sensibles)</strong></td>
+                  <td>Motivo de consulta, historial clínico, diagnósticos, tratamientos</td>
+                  <td>Consulta médica presencial, comunicaciones con profesionales</td>
+                </tr>
+                <tr>
+                  <td><strong>Comunicación</strong></td>
+                  <td>Contenido de mensajes, consultas enviadas</td>
+                  <td>Formulario web, WhatsApp, Instagram</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>2.2 Datos recopilados automáticamente</h3>
+          <p>Al navegar por nuestro sitio web, podemos registrar de forma automática:</p>
+          <ul>
+            <li>Dirección IP y tipo de navegador (datos técnicos de acceso)</li>
+            <li>Páginas visitadas y tiempo de navegación (estadísticas anónimas de uso)</li>
+          </ul>
+          <p>Este sitio web <strong>no utiliza cookies de rastreo publicitario ni comparte datos de navegación con terceros con fines comerciales.</strong></p>
+        </div>
+
+        <!-- 3. FINALIDAD -->
+        <div class="policy-section" id="finalidad">
+          <h2><span class="me-2" style="color:var(--color-accent)">03.</span>Finalidad del tratamiento</h2>
+          <p>Sus datos personales son tratados exclusivamente para las siguientes finalidades:</p>
+          <div class="row g-3 mt-1">
+            <div class="col-md-6">
+              <div class="d-flex gap-3 align-items-start">
+                <div class="benefit-icon flex-shrink-0"><i class="bi bi-calendar2-check"></i></div>
+                <div>
+                  <h6 style="font-weight:700">Gestión de citas y agendamiento</h6>
+                  <p class="small text-muted mb-0">Coordinar, confirmar y gestionar sus consultas y reservas con nuestros profesionales.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="d-flex gap-3 align-items-start">
+                <div class="benefit-icon flex-shrink-0"><i class="bi bi-heart-pulse"></i></div>
+                <div>
+                  <h6 style="font-weight:700">Prestación de servicios de salud</h6>
+                  <p class="small text-muted mb-0">Realizar evaluaciones, diagnósticos, tratamientos y el seguimiento clínico necesario.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="d-flex gap-3 align-items-start">
+                <div class="benefit-icon flex-shrink-0"><i class="bi bi-envelope"></i></div>
+                <div>
+                  <h6 style="font-weight:700">Respuesta a consultas</h6>
+                  <p class="small text-muted mb-0">Contestar sus preguntas y solicitudes enviadas a través del formulario web, WhatsApp o Instagram.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="d-flex gap-3 align-items-start">
+                <div class="benefit-icon flex-shrink-0"><i class="bi bi-file-earmark-medical"></i></div>
+                <div>
+                  <h6 style="font-weight:700">Gestión de registros clínicos</h6>
+                  <p class="small text-muted mb-0">Mantener su ficha y expediente clínico conforme a las obligaciones legales en materia de salud.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="d-flex gap-3 align-items-start">
+                <div class="benefit-icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+                <div>
+                  <h6 style="font-weight:700">Mejora de servicios</h6>
+                  <p class="small text-muted mb-0">Analizar de forma agregada y anónima el uso del sitio para mejorar la experiencia del usuario.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="d-flex gap-3 align-items-start">
+                <div class="benefit-icon flex-shrink-0"><i class="bi bi-bell"></i></div>
+                <div>
+                  <h6 style="font-weight:700">Comunicaciones informativas</h6>
+                  <p class="small text-muted mb-0">Enviarle recordatorios de citas o información relevante sobre nuestros servicios, solo con su consentimiento expreso.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="alert mt-4 rounded-3 border-0" style="background:#EFF6FF;color:#1e40af">
+            <i class="bi bi-info-circle-fill me-2"></i>
+            <strong>Sus datos no serán utilizados para finalidades distintas</strong> a las descritas anteriormente sin su consentimiento previo y explícito.
+          </div>
+        </div>
+
+        <!-- 4. BASE LEGAL -->
+        <div class="policy-section" id="base-legal">
+          <h2><span class="me-2" style="color:var(--color-accent)">04.</span>Base legal del tratamiento</h2>
+          <p>El tratamiento de sus datos personales se fundamenta en las siguientes bases legales, de acuerdo con la legislación chilena vigente:</p>
+          <div class="table-responsive">
+            <table class="table data-table">
+              <thead>
+                <tr>
+                  <th>Tratamiento</th>
+                  <th>Base legal</th>
+                  <th>Normativa</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Datos de contacto para responder consultas</td>
+                  <td>Consentimiento del titular</td>
+                  <td>Art. 4, Ley 19.628</td>
+                </tr>
+                <tr>
+                  <td>Datos clínicos y de salud</td>
+                  <td>Ejecución de contrato de prestación de servicios de salud + obligación legal</td>
+                  <td>Ley 20.584; Art. 9, Ley 19.628</td>
+                </tr>
+                <tr>
+                  <td>Registros clínicos (ficha médica)</td>
+                  <td>Obligación legal — conservación mínima 15 años</td>
+                  <td>Art. 12, Ley 20.584; Reglamento fichas clínicas</td>
+                </tr>
+                <tr>
+                  <td>Estadísticas de navegación anónimas</td>
+                  <td>Interés legítimo (datos anonimizados)</td>
+                  <td>Art. 4 letra f), Ley 21.719</td>
+                </tr>
+                <tr>
+                  <td>Comunicaciones informativas opcionales</td>
+                  <td>Consentimiento expreso</td>
+                  <td>Art. 4 y 28, Ley 19.628</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 5. DATOS SENSIBLES / SALUD -->
+        <div class="policy-section" id="datos-sensibles">
+          <h2><span class="me-2" style="color:var(--color-accent)">05.</span>Tratamiento de datos de salud (datos sensibles)</h2>
+          <div class="sensitive-alert mb-4">
+            <div class="d-flex gap-3">
+              <i class="bi bi-exclamation-triangle-fill fs-4 flex-shrink-0"></i>
+              <div>
+                <strong>Los datos de salud son considerados datos sensibles</strong> bajo la legislación chilena y reciben protección reforzada. Solo los profesionales de la salud directamente involucrados en su atención tendrán acceso a su información clínica.
+              </div>
+            </div>
+          </div>
+          <p>De acuerdo con la <strong>Ley 20.584</strong> (Derechos y deberes de los pacientes) y la <strong>Ley 19.628</strong> (Protección de la vida privada), los datos relativos a su salud:</p>
+          <ul>
+            <li>Son recopilados únicamente con su consentimiento informado previo al inicio de la atención.</li>
+            <li>Son accesibles exclusivamente por los profesionales de salud que lo atienden directamente.</li>
+            <li>No son compartidos con terceros sin su autorización expresa, salvo obligación legal (ej. notificación de enfermedades de declaración obligatoria).</li>
+            <li>Son almacenados en sistemas con medidas de seguridad reforzadas.</li>
+            <li>Usted tiene derecho a acceder a su ficha clínica en cualquier momento (Art. 12, Ley 20.584).</li>
+          </ul>
+          <h3>Consentimiento informado en salud</h3>
+          <p>Antes de iniciar cualquier tratamiento o procedimiento clínico, nuestros profesionales le solicitarán su <strong>consentimiento informado</strong> en los términos establecidos por el Título II de la Ley 20.584. Este consentimiento es independiente del consentimiento para el tratamiento de datos personales.</p>
+        </div>
+
+        <!-- 6. CONSERVACIÓN -->
+        <div class="policy-section" id="conservacion">
+          <h2><span class="me-2" style="color:var(--color-accent)">06.</span>Conservación de los datos</h2>
+          <div class="table-responsive">
+            <table class="table data-table">
+              <thead>
+                <tr><th>Tipo de dato</th><th>Plazo de conservación</th><th>Fundamento</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Ficha y registros clínicos</td>
+                  <td><strong>Mínimo 15 años</strong> desde la última atención</td>
+                  <td>Art. 12, Ley 20.584</td>
+                </tr>
+                <tr>
+                  <td>Datos de contacto (formulario web)</td>
+                  <td>Hasta 2 años desde el último contacto o hasta que solicite su eliminación</td>
+                  <td>Interés legítimo / consentimiento</td>
+                </tr>
+                <tr>
+                  <td>Datos de comunicaciones (WhatsApp)</td>
+                  <td>Hasta 1 año desde la última comunicación</td>
+                  <td>Interés legítimo</td>
+                </tr>
+                <tr>
+                  <td>Datos de navegación (técnicos)</td>
+                  <td>Máximo 12 meses de forma anonimizada</td>
+                  <td>Interés legítimo</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Una vez vencidos los plazos señalados, procederemos a eliminar o anonimizar sus datos de forma segura, salvo que exista una obligación legal que exija su conservación por un período mayor.</p>
+        </div>
+
+        <!-- 7. TERCEROS -->
+        <div class="policy-section" id="terceros">
+          <h2><span class="me-2" style="color:var(--color-accent)">07.</span>Compartir datos con terceros</h2>
+          <p><strong>Centro Neurodesarrollo San Vicente no vende, arrienda ni cede sus datos personales a terceros con fines comerciales.</strong></p>
+          <p>Sus datos podrán ser compartidos únicamente en los siguientes casos:</p>
+          <ul>
+            <li><strong>Otros profesionales de salud dentro del centro:</strong> Para asegurar la continuidad e integralidad de su atención, con estricto deber de confidencialidad.</li>
+            <li><strong>Prestadores de servicios técnicos:</strong> Proveedores de software o servicios de nube que traten datos en nuestro nombre, bajo acuerdos de confidencialidad y condiciones equivalentes de protección.</li>
+            <li><strong>Autoridades competentes:</strong> Cuando exista una obligación legal o requerimiento judicial que nos obligue a hacerlo (ej. Ministerio de Salud, Tribunales de Justicia).</li>
+            <li><strong>Derivación a especialistas:</strong> Si su tratamiento requiere la intervención de otro especialista, compartiremos la información clínica estrictamente necesaria, previa comunicación con usted.</li>
+          </ul>
+          <p>En ningún caso sus datos serán transferidos fuera de Chile sin su consentimiento previo, salvo que la legislación aplicable lo permita o exija.</p>
+        </div>
+
+        <!-- 8. DERECHOS ARCO -->
+        <div class="policy-section" id="derechos-arco">
+          <h2><span class="me-2" style="color:var(--color-accent)">08.</span>Sus derechos ARCO y otros derechos</h2>
+          <p>La legislación chilena le garantiza los siguientes derechos respecto de sus datos personales. Puede ejercerlos de forma gratuita en cualquier momento:</p>
+
+          <div class="row g-3 mt-2">
+            <!-- Acceso -->
+            <div class="col-md-6">
+              <div class="arco-card shadow-sm">
+                <div class="arco-letter" style="background:linear-gradient(135deg,#3A5A3A,#5A7B5A)">A</div>
+                <h5>Acceso</h5>
+                <p>Derecho a conocer qué datos personales suyos tenemos, cómo los tratamos, con qué finalidad, de dónde los obtuvimos y a quién los hemos comunicado.</p>
+                <div class="mt-3 pt-2" style="border-top:1px solid #EDF2F7">
+                  <p class="small text-muted mb-0"><i class="bi bi-clock me-1"></i>Respuesta en un plazo máximo de <strong>20 días hábiles</strong></p>
+                </div>
+              </div>
+            </div>
+            <!-- Rectificación -->
+            <div class="col-md-6">
+              <div class="arco-card shadow-sm">
+                <div class="arco-letter" style="background:linear-gradient(135deg,#7a4040,#C8877C)">R</div>
+                <h5>Rectificación</h5>
+                <p>Derecho a corregir sus datos personales cuando estos sean inexactos, incompletos, equívocos o desactualizados, acompañando los antecedentes que lo justifiquen.</p>
+                <div class="mt-3 pt-2" style="border-top:1px solid #EDF2F7">
+                  <p class="small text-muted mb-0"><i class="bi bi-clock me-1"></i>Respuesta en un plazo máximo de <strong>20 días hábiles</strong></p>
+                </div>
+              </div>
+            </div>
+            <!-- Cancelación -->
+            <div class="col-md-6">
+              <div class="arco-card shadow-sm">
+                <div class="arco-letter" style="background:linear-gradient(135deg,#4c1d95,#7c3aed)">C</div>
+                <h5>Cancelación (Supresión)</h5>
+                <p>Derecho a solicitar la eliminación de sus datos personales cuando hayan dejado de ser necesarios para la finalidad para la que fueron recabados o cuando retire su consentimiento.</p>
+                <div class="mt-3 pt-2" style="border-top:1px solid #EDF2F7">
+                  <p class="small text-muted mb-0"><i class="bi bi-info-circle me-1"></i>No aplica a registros clínicos con obligación legal de conservación</p>
+                </div>
+              </div>
+            </div>
+            <!-- Oposición -->
+            <div class="col-md-6">
+              <div class="arco-card shadow-sm">
+                <div class="arco-letter" style="background:linear-gradient(135deg,#78350f,#d97706)">O</div>
+                <h5>Oposición</h5>
+                <p>Derecho a oponerse al tratamiento de sus datos cuando este se base en interés legítimo, o a retirar su consentimiento para comunicaciones informativas y de marketing en cualquier momento.</p>
+                <div class="mt-3 pt-2" style="border-top:1px solid #EDF2F7">
+                  <p class="small text-muted mb-0"><i class="bi bi-clock me-1"></i>Respuesta en un plazo máximo de <strong>20 días hábiles</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Derechos adicionales Ley 21.719 -->
+          <h3 class="mt-4">Derechos adicionales (Ley 21.719)</h3>
+          <p>La nueva Ley de Protección de Datos Personales (Ley 21.719) incorpora derechos adicionales que también puede ejercer ante nosotros:</p>
+          <div class="row g-3">
+            <div class="col-md-4">
+              <div class="card border-0 rounded-3 p-3 h-100" style="background:var(--color-primary-xlight)">
+                <i class="bi bi-lock-fill fs-4 mb-2" style="color:var(--color-primary)"></i>
+                <h6 style="font-weight:700">Portabilidad</h6>
+                <p class="small text-muted mb-0">Recibir sus datos en formato estructurado, de uso común y lectura mecánica para trasladarlos a otro responsable.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card border-0 rounded-3 p-3 h-100" style="background:var(--color-primary-xlight)">
+                <i class="bi bi-x-circle-fill fs-4 mb-2" style="color:var(--color-primary)"></i>
+                <h6 style="font-weight:700">No ser objeto de decisiones automatizadas</h6>
+                <p class="small text-muted mb-0">No ser sometido a decisiones basadas únicamente en tratamiento automatizado que le produzcan efectos jurídicos.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card border-0 rounded-3 p-3 h-100" style="background:var(--color-primary-xlight)">
+                <i class="bi bi-hand-thumbs-up-fill fs-4 mb-2" style="color:var(--color-primary)"></i>
+                <h6 style="font-weight:700">Retirar el consentimiento</h6>
+                <p class="small text-muted mb-0">Retirar el consentimiento otorgado en cualquier momento, sin que ello afecte la licitud del tratamiento previo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. CÓMO EJERCER DERECHOS -->
+        <div class="policy-section" id="como-ejercer">
+          <h2><span class="me-2" style="color:var(--color-accent)">09.</span>Cómo ejercer sus derechos</h2>
+          <p>Puede ejercer sus derechos de forma gratuita siguiendo estos pasos:</p>
+
+          <div class="mt-3 mb-4">
+            <div class="step-item">
+              <div class="step-num">1</div>
+              <div>
+                <h6>Prepare su solicitud</h6>
+                <p>Indique: su nombre completo, el derecho que desea ejercer (Acceso, Rectificación, Cancelación u Oposición), una descripción clara de su solicitud y sus datos de contacto para responderle.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">2</div>
+              <div>
+                <h6>Acredite su identidad</h6>
+                <p>Adjunte una copia de su cédula de identidad vigente. Si actúa en representación de otra persona, deberá acompañar además el documento que acredite dicha representación.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">3</div>
+              <div>
+                <h6>Envíe su solicitud por uno de estos medios</h6>
+                <div class="row g-3 mt-1">
+                  <div class="col-sm-6">
+                    <div class="card border-0 rounded-3 p-3 text-center" style="background:#EEF6EE">
+                      <i class="bi bi-whatsapp fs-3 mb-2" style="color:#25D366"></i>
+                      <p class="small fw-bold mb-1">WhatsApp</p>
+                      <a href="https://wa.me/56942488769?text=Hola%2C%20quiero%20ejercer%20mis%20derechos%20ARCO%20sobre%20mis%20datos%20personales"
+                         class="btn btn-sm btn-accent rounded-pill" target="_blank" rel="noopener noreferrer">
+                        +56 9 4248 8769
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="card border-0 rounded-3 p-3 text-center" style="background:#EEF6EE">
+                      <i class="bi bi-geo-alt-fill fs-3 mb-2" style="color:var(--color-primary)"></i>
+                      <p class="small fw-bold mb-1">Presencial</p>
+                      <p class="small text-muted mb-0">Centro Neurodesarrollo San Vicente<br>Lunes a Viernes 8:30–20:00 · Sáb 8:30–14:00</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">4</div>
+              <div>
+                <h6>Reciba nuestra respuesta</h6>
+                <p>Le responderemos en un plazo máximo de <strong>20 días hábiles</strong> desde la recepción de su solicitud con toda la documentación en orden. Si necesitamos más información, se lo haremos saber oportunamente.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formulario de solicitud ARCO -->
+          <div class="card border-0 rounded-4 p-4 p-md-5" style="background:linear-gradient(145deg,var(--color-primary-dark),var(--color-primary-mid))">
+            <div class="row align-items-center g-4">
+              <div class="col-lg-7">
+                <h4 class="font-heading text-white mb-2">Solicitud de ejercicio de derechos ARCO</h4>
+                <p style="color:rgba(255,255,255,.8);font-size:.9375rem">
+                  Escríbanos directamente por WhatsApp indicando el derecho que desea ejercer. Le atenderemos de forma confidencial y a la brevedad.
+                </p>
+                <ul style="color:rgba(255,255,255,.7);font-size:.875rem;padding-left:1.25rem">
+                  <li class="mb-1">Respuesta en máximo 20 días hábiles</li>
+                  <li class="mb-1">Servicio completamente gratuito</li>
+                  <li class="mb-1">Atención confidencial y segura</li>
+                </ul>
+              </div>
+              <div class="col-lg-5 text-center">
+                <a href="https://wa.me/56942488769?text=Hola%2C%20deseo%20ejercer%20mis%20derechos%20ARCO.%20Mi%20solicitud%20es%3A%20"
+                   class="btn btn-lg btn-accent rounded-pill px-4 mb-2 d-block" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-whatsapp me-2"></i>Enviar solicitud ARCO
+                </a>
+                <p style="color:rgba(255,255,255,.55);font-size:.8rem">+56 9 4248 8769</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="alert mt-4 rounded-3 border-0" style="background:#FFFBEB;color:#92400e">
+            <i class="bi bi-info-circle-fill me-2" style="color:#d97706"></i>
+            <strong>Derecho a reclamar ante la Agencia:</strong> Si considera que su solicitud no fue atendida correctamente o que sus derechos han sido vulnerados, puede presentar un reclamo ante la <strong>Agencia de Protección de Datos Personales de Chile</strong> (Art. 51, Ley 21.719) una vez que dicho organismo entre en funcionamiento, o ante el juzgado civil competente de conformidad al Art. 16 de la Ley 19.628.
+          </div>
+        </div>
+
+        <!-- 10. MENORES -->
+        <div class="policy-section" id="menores">
+          <h2><span class="me-2" style="color:var(--color-accent)">10.</span>Tratamiento de datos de menores de edad</h2>
+          <p>Centro Neurodesarrollo San Vicente atiende a niños y adolescentes como parte de sus servicios. Para el tratamiento de datos de menores de 14 años, requeriremos el consentimiento de sus padres o representantes legales. Para adolescentes entre 14 y 18 años, su consentimiento será válido en los términos establecidos por la legislación vigente.</p>
+          <p>Los datos de salud de menores de edad gozan de la misma protección reforzada que los del resto de los pacientes, y los progenitores o tutores legales podrán ejercer los derechos ARCO en representación de sus hijos o pupilos.</p>
+        </div>
+
+        <!-- 11. SEGURIDAD -->
+        <div class="policy-section" id="seguridad">
+          <h2><span class="me-2" style="color:var(--color-accent)">11.</span>Seguridad de los datos</h2>
+          <p>Hemos adoptado medidas técnicas y organizativas apropiadas para garantizar la seguridad e integridad de sus datos personales, protegiéndolos frente a accesos no autorizados, pérdida, alteración o divulgación indebida. Entre estas medidas se incluyen:</p>
+          <div class="row g-3 mt-1">
+            <div class="col-sm-6 col-md-4">
+              <div class="d-flex gap-2 align-items-start">
+                <i class="bi bi-shield-check-fill mt-1 flex-shrink-0" style="color:var(--color-primary)"></i>
+                <p class="small mb-0">Control de acceso restringido a la información clínica</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <div class="d-flex gap-2 align-items-start">
+                <i class="bi bi-shield-check-fill mt-1 flex-shrink-0" style="color:var(--color-primary)"></i>
+                <p class="small mb-0">Confidencialidad profesional y deber de sigilo del personal</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <div class="d-flex gap-2 align-items-start">
+                <i class="bi bi-shield-check-fill mt-1 flex-shrink-0" style="color:var(--color-primary)"></i>
+                <p class="small mb-0">Transmisión de datos clínicos por canales seguros</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <div class="d-flex gap-2 align-items-start">
+                <i class="bi bi-shield-check-fill mt-1 flex-shrink-0" style="color:var(--color-primary)"></i>
+                <p class="small mb-0">Copias de respaldo periódicas de la información</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <div class="d-flex gap-2 align-items-start">
+                <i class="bi bi-shield-check-fill mt-1 flex-shrink-0" style="color:var(--color-primary)"></i>
+                <p class="small mb-0">Capacitación del personal en protección de datos</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <div class="d-flex gap-2 align-items-start">
+                <i class="bi bi-shield-check-fill mt-1 flex-shrink-0" style="color:var(--color-primary)"></i>
+                <p class="small mb-0">Revisión periódica de las prácticas de seguridad</p>
+              </div>
+            </div>
+          </div>
+          <p class="mt-3">En caso de producirse una brecha de seguridad que pueda afectar sus derechos, le notificaremos en los plazos establecidos por la legislación aplicable.</p>
+        </div>
+
+        <!-- 12. CAMBIOS -->
+        <div class="policy-section" id="cambios">
+          <h2><span class="me-2" style="color:var(--color-accent)">12.</span>Cambios en esta política</h2>
+          <p>Nos reservamos el derecho de actualizar esta Política de Privacidad para adaptarla a cambios legislativos, criterios jurisprudenciales o modificaciones en nuestras prácticas de tratamiento de datos.</p>
+          <p>Cualquier modificación relevante será comunicada a través de nuestro sitio web y, cuando corresponda, por los canales de contacto habituales. Le recomendamos revisar periódicamente esta política. La fecha de la última actualización se indica al inicio del documento.</p>
+        </div>
+
+        <!-- 13. CONTACTO DPO -->
+        <div class="policy-section" id="contacto-dpo">
+          <h2><span class="me-2" style="color:var(--color-accent)">13.</span>Contacto para asuntos de privacidad</h2>
+          <p>Para cualquier consulta, duda o solicitud relacionada con el tratamiento de sus datos personales o el ejercicio de sus derechos, puede contactarnos a través de los siguientes medios:</p>
+          <div class="row g-3 mt-1">
+            <div class="col-sm-6 col-lg-4">
+              <div class="card border-0 rounded-4 p-4 text-center h-100" style="background:var(--color-primary-xlight)">
+                <i class="bi bi-whatsapp fs-2 mb-2" style="color:#25D366"></i>
+                <h6 style="font-weight:700">WhatsApp</h6>
+                <a href="https://wa.me/56942488769?text=Consulta%20sobre%20privacidad%20y%20datos%20personales"
+                   class="btn btn-accent btn-sm rounded-pill mt-2 px-3" target="_blank" rel="noopener noreferrer">
+                  +56 9 4248 8769
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+              <div class="card border-0 rounded-4 p-4 text-center h-100" style="background:var(--color-primary-xlight)">
+                <i class="bi bi-telephone-fill fs-2 mb-2" style="color:var(--color-primary)"></i>
+                <h6 style="font-weight:700">Teléfono</h6>
+                <a href="tel:+56942488769" class="btn btn-primary btn-sm rounded-pill mt-2 px-3">
+                  +56 9 4248 8769
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+              <div class="card border-0 rounded-4 p-4 text-center h-100" style="background:var(--color-primary-xlight)">
+                <i class="bi bi-building fs-2 mb-2" style="color:var(--color-primary)"></i>
+                <h6 style="font-weight:700">Presencial</h6>
+                <p class="small text-muted mb-0">San Vicente de Tagua Tagua, Región O'Higgins<br>Lunes a Viernes 8:30–20:00 · Sáb 8:30–14:00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CIERRE -->
+        <div class="mt-5 p-4 rounded-4 text-center" style="background:var(--color-primary-xlight)">
+          <i class="bi bi-shield-lock-fill fs-2 mb-2 d-block" style="color:var(--color-primary)"></i>
+          <p class="mb-1 fw-bold" style="color:var(--color-primary-dark)">Su privacidad es nuestra responsabilidad</p>
+          <p class="small text-muted mb-3">Centro Neurodesarrollo San Vicente · San Vicente, Región O'Higgins, Chile</p>
+          <div class="d-flex flex-wrap gap-2 justify-content-center">
+            <a href="contacto.html" class="btn btn-sm btn-outline-primary rounded-pill px-3">Formulario de contacto</a>
+            <a href="https://wa.me/56942488769?text=Consulta%20sobre%20privacidad"
+               class="btn btn-sm btn-accent rounded-pill px-3" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-whatsapp me-1"></i>WhatsApp
+            </a>
+          </div>
+        </div>
+
+      </div><!-- end col-lg-9 -->
+    </div><!-- end row -->
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer-dark pt-5 pb-4">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-12">
+        <div class="footer-logo-wrap mb-2">
+          <img src="assets/img/Logo.jpg" alt="Centro Neurodesarrollo San Vicente" class="footer-logo">
+        </div>
+        <p class="small mb-3" style="color:rgba(255,255,255,.6);max-width:280px">Equipo multidisciplinario comprometido con tu bienestar y el de tu familia.</p>
+        <div class="footer-social d-flex gap-2">
+          <a href="https://www.instagram.com/centroneuro.cv" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.tiktok.com/@centroneurodesarrollosv" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61574772495186" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://wa.me/56942488769" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          <a href="tel:+56942488769" aria-label="Teléfono"><i class="bi bi-telephone-fill"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-sm-4">
+        <h6 class="mb-3">Navegación</h6>
+        <ul class="list-unstyled small">
+          <li class="mb-2"><a href="index.html">Inicio</a></li>
+          <li class="mb-2"><a href="servicios.html">Servicios</a></li>
+          <li class="mb-2"><a href="talleres.html">Talleres</a></li>
+          <li class="mb-2"><a href="equipo.html">Equipo</a></li>
+          <li class="mb-2"><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-4">
+        <h6 class="mb-3">Especialidades</h6>
+        <ul class="list-unstyled small">
+          <li class="mb-2"><a href="servicios.html">Neurología</a></li>
+          <li class="mb-2"><a href="servicios.html">Psiquiatría</a></li>
+          <li class="mb-2"><a href="servicios.html">Psicología</a></li>
+          <li class="mb-2"><a href="servicios.html">Fonoaudiología</a></li>
+          <li class="mb-2"><a href="servicios.html">Kinesiología</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-4">
+        <h6 class="mb-3">Contacto</h6>
+        <ul class="list-unstyled small">
+          <li class="mb-2 d-flex gap-2"><i class="bi bi-telephone-fill text-accent mt-1 flex-shrink-0"></i><a href="tel:+56942488769">+56 9 4248 8769</a></li>
+          <li class="mb-2 d-flex gap-2"><i class="bi bi-whatsapp text-accent mt-1 flex-shrink-0"></i><a href="https://wa.me/56942488769" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+          <li class="mb-2 d-flex gap-2"><i class="bi bi-envelope-fill text-accent mt-1 flex-shrink-0"></i><a href="mailto:centroneurodesarrollosv@gmail.com">centroneurodesarrollosv@gmail.com</a></li>
+          <li class="mb-2 d-flex gap-2"><i class="bi bi-instagram text-accent mt-1 flex-shrink-0"></i><a href="https://www.instagram.com/centroneuro.cv" target="_blank" rel="noopener noreferrer">@centroneuro.cv</a></li>
+          <li class="mb-2 d-flex gap-2"><i class="bi bi-tiktok text-accent mt-1 flex-shrink-0"></i><a href="https://www.tiktok.com/@centroneurodesarrollosv" target="_blank" rel="noopener noreferrer">@Centroneurodesarrollosv</a></li>
+          <li class="mb-2 d-flex gap-2"><i class="bi bi-facebook text-accent mt-1 flex-shrink-0"></i><a href="https://www.facebook.com/profile.php?id=61574772495186" target="_blank" rel="noopener noreferrer">Centro Neurodesarrollo SV</a></li>
+          <li class="mb-2 d-flex gap-2"><i class="bi bi-geo-alt-fill text-accent mt-1 flex-shrink-0"></i><span style="color:rgba(255,255,255,.6)">San Vicente, O'Higgins</span></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="mt-4 mb-3" style="border-color:rgba(255,255,255,.1)">
+    <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+      <p class="small mb-0" style="color:rgba(255,255,255,.35)">© 2025 Centro Neurodesarrollo San Vicente · Todos los derechos reservados</p>
+      <div class="d-flex flex-wrap gap-3 align-items-center">
+        <a href="privacidad.html" class="small text-decoration-none" style="color:rgba(255,255,255,.45)"><i class="bi bi-shield-lock me-1"></i>Política de Privacidad</a>
+        <p class="small mb-0" style="color:rgba(255,255,255,.25)">Hecho con <i class="bi bi-heart-fill text-accent"></i> en Chile</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/56942488769?text=Hola%2C%20quisiera%20agendar%20una%20consulta"
+   class="whatsapp-fab" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc4s9bIOgUxi8T/jzmJHD0enk1f8r0+86C18cC+a7N6" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+<script>
+  /* Resaltar sección activa en el índice al hacer scroll */
+  const sections = document.querySelectorAll('.policy-section[id]');
+  const tocLinks = document.querySelectorAll('.toc-link');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.toc-link[href="#${e.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>

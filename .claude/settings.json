@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"c:\\\\Repo\\\\CentroNeuroDesarrolloSV\" -Force)",
+      "Skill(run)",
+      "Skill(run:*)",
+      "Bash(start \"c:\\\\Repo\\\\CentroNeuroDesarrolloSV\\\\index.html\")"
+    ]
+  }
+}

@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propuestas de Color — Centro Neurodesarrollo San Vicente</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --font-heading: 'Playfair Display', serif; --font-body: 'Inter', sans-serif; }
+    body { font-family: var(--font-body); background: #f1f5f9; }
+
+    /* ===== PAGE HEADER ===== */
+    .page-top {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      padding: 3rem 0 2rem;
+      text-align: center;
+    }
+    .page-top h1 { font-family: var(--font-heading); font-size: 2.25rem; }
+    .page-top p  { color: rgba(255,255,255,.7); max-width: 560px; margin: 0 auto; }
+
+    /* ===== PALETTE SECTION ===== */
+    .palette-section { padding: 3rem 0; border-bottom: 1px solid #e2e8f0; }
+    .palette-section:last-child { border-bottom: none; }
+    .palette-label {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      margin-bottom: .25rem;
+    }
+    .palette-desc { color: #64748b; font-size: .9375rem; margin-bottom: 2rem; }
+
+    /* Swatches */
+    .swatch-row { display: flex; flex-wrap: wrap; gap: .75rem; margin-bottom: 2rem; }
+    .swatch {
+      width: 70px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,.12);
+    }
+    .swatch-color { height: 48px; }
+    .swatch-name { font-size: .65rem; text-align: center; padding: .3rem .2rem; background: white; color: #334155; font-weight: 600; }
+
+    /* Mini Preview Card */
+    .preview-card {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,0,0,.12);
+      background: white;
+    }
+
+    /* Mini Navbar */
+    .mini-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: .75rem 1.25rem;
+      background: white;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .mini-brand { font-family: var(--font-heading); font-size: .875rem; display: flex; align-items: center; gap: .5rem; }
+    .mini-brand-icon {
+      width: 30px; height: 30px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .875rem; color: white;
+    }
+    .mini-links { display: flex; gap: .25rem; }
+    .mini-link { font-size: .75rem; padding: .25rem .5rem; border-radius: 5px; color: #374151; font-weight: 500; }
+    .mini-btn { font-size: .75rem; padding: .35rem .85rem; border-radius: 50px; color: white; font-weight: 600; border: none; }
+
+    /* Mini Hero */
+    .mini-hero {
+      padding: 2.5rem 1.5rem;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .mini-hero::before {
+      content: '';
+      position: absolute; top: -30%; right: -10%;
+      width: 50%; height: 150%;
+      border-radius: 50%;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    .mini-hero h2 { font-family: var(--font-heading); font-size: 1.35rem; margin-bottom: .5rem; color: white; }
+    .mini-hero p  { font-size: .8125rem; color: rgba(255,255,255,.8); margin-bottom: 1.25rem; max-width: 320px; }
+    .mini-hero-btns { display: flex; gap: .5rem; flex-wrap: wrap; }
+    .mini-hero-btn {
+      font-size: .75rem; padding: .4rem 1rem; border-radius: 50px;
+      border: none; font-weight: 600; cursor: pointer;
+    }
+    .mini-hero-btn.outline { background: transparent; border: 1.5px solid rgba(255,255,255,.6); color: white; }
+    .mini-badge {
+      display: inline-flex; align-items: center; gap: .375rem;
+      background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2);
+      color: rgba(255,255,255,.95); border-radius: 50px;
+      padding: .25rem .75rem; font-size: .75rem; font-weight: 500;
+      margin-bottom: .875rem;
+    }
+
+    /* Mini Cards Row */
+    .mini-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: .75rem;
+      padding: 1.25rem;
+      background: #f9fafb;
+    }
+    .mini-card {
+      background: white;
+      border-radius: 10px;
+      padding: 1rem;
+      border: 1px solid rgba(0,0,0,.06);
+      box-shadow: 0 1px 4px rgba(0,0,0,.05);
+    }
+    .mini-card-icon {
+      width: 38px; height: 38px; border-radius: 9px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; margin-bottom: .625rem;
+    }
+    .mini-card h6 { font-size: .75rem; font-weight: 600; margin-bottom: .25rem; color: #111827; font-family: var(--font-body); }
+    .mini-card p  { font-size: .6875rem; color: #6b7280; margin: 0; line-height: 1.4; }
+    .mini-card-link { font-size: .6875rem; font-weight: 600; margin-top: .5rem; display: block; }
+
+    /* Mini Footer */
+    .mini-footer {
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .mini-footer-brand { font-family: var(--font-heading); font-size: .8125rem; color: white; }
+    .mini-footer-links { display: flex; gap: .75rem; }
+    .mini-footer-links a { font-size: .7rem; color: rgba(255,255,255,.6); text-decoration: none; }
+
+    /* Apply button */
+    .apply-btn {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .625rem 1.5rem; border-radius: 50px; border: none;
+      font-weight: 600; font-size: .9rem; cursor: pointer;
+      text-decoration: none; transition: opacity .2s;
+    }
+    .apply-btn:hover { opacity: .85; }
+
+    /* Current tag */
+    .current-tag {
+      display: inline-flex; align-items: center; gap: .375rem;
+      background: #dcfce7; color: #15803d;
+      border-radius: 50px; padding: .25rem .75rem; font-size: .8rem;
+      font-weight: 600; vertical-align: middle; margin-left: .5rem;
+    }
+
+    @media (max-width: 576px) {
+      .mini-cards { grid-template-columns: repeat(2, 1fr); }
+      .mini-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- PAGE TOP -->
+<div class="page-top">
+  <div class="container">
+    <h1>Propuestas de Color</h1>
+    <p class="mt-2 mb-3">5 paletas profesionales para Centro Neurodesarrollo San Vicente. Cada una muestra navbar, hero, cards y footer aplicados.</p>
+    <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+      <a href="#paleta-1" class="btn btn-sm btn-outline-light rounded-pill">1 · Violeta Neuro</a>
+      <a href="#paleta-2" class="btn btn-sm btn-outline-light rounded-pill">2 · Verde Esmeralda</a>
+      <a href="#paleta-3" class="btn btn-sm btn-outline-light rounded-pill">3 · Teal Oceánico</a>
+      <a href="#paleta-4" class="btn btn-sm btn-outline-light rounded-pill">4 · Índigo Dorado</a>
+      <a href="#paleta-5" class="btn btn-sm btn-outline-light rounded-pill">5 · Coral Vivo</a>
+    </div>
+  </div>
+</div>
+
+<div class="container py-4">
+
+  <!-- ========================================================
+       PALETA 1 — VIOLETA NEURO
+       ======================================================== -->
+  <div class="palette-section" id="paleta-1">
+    <div class="row align-items-start g-4">
+      <div class="col-lg-4">
+        <p class="fw-bold text-uppercase small mb-1" style="color:#7c3aed;letter-spacing:.05em">Paleta 1</p>
+        <h2 class="palette-label" style="color:#4c1d95">Violeta Neuro</h2>
+        <p class="palette-desc">Evoca innovación científica y neurología. El violeta conecta directamente con el cerebro y la mente. Moderno, diferenciador y con personalidad fuerte.</p>
+        <div class="swatch-row">
+          <div class="swatch"><div class="swatch-color" style="background:#4c1d95"></div><div class="swatch-name">#4c1d95<br>Oscuro</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#7c3aed"></div><div class="swatch-name">#7c3aed<br>Principal</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#a78bfa"></div><div class="swatch-name">#a78bfa<br>Medio</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#ede9fe"></div><div class="swatch-name">#ede9fe<br>Claro</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#f59e0b"></div><div class="swatch-name">#f59e0b<br>Acento</div></div>
+        </div>
+        <div class="d-flex gap-2 flex-wrap mb-3">
+          <a href="index.html?p=1" class="apply-btn text-white" style="background:#7c3aed">
+            <i class="bi bi-check2-circle"></i>Aplicar esta paleta
+          </a>
+        </div>
+        <p class="small text-muted"><i class="bi bi-lightbulb me-1"></i>Ideal si quieren destacarse totalmente del azul clásico médico y posicionarse como un centro innovador.</p>
+      </div>
+      <div class="col-lg-8">
+        <div class="preview-card">
+          <!-- Navbar -->
+          <div class="mini-nav">
+            <div class="mini-brand">
+              <div class="mini-brand-icon" style="background:linear-gradient(135deg,#7c3aed,#4c1d95)"><i class="bi bi-heart-pulse-fill"></i></div>
+              <div>
+                <div style="font-size:.8125rem;line-height:1.1;color:#4c1d95;font-weight:700">Centro Neurodesarrollo</div>
+                <div style="font-size:.65rem;color:#7c3aed">San Vicente</div>
+              </div>
+            </div>
+            <div class="mini-links">
+              <span class="mini-link" style="color:#7c3aed;background:#ede9fe">Inicio</span>
+              <span class="mini-link">Servicios</span>
+              <span class="mini-link">Talleres</span>
+              <span class="mini-link">Contacto</span>
+            </div>
+            <button class="mini-btn" style="background:linear-gradient(135deg,#7c3aed,#4c1d95)">
+              <i class="bi bi-calendar2-check me-1"></i>Agendar
+            </button>
+          </div>
+          <!-- Hero -->
+          <div class="mini-hero" style="background:linear-gradient(135deg,#4c1d95 0%,#6d28d9 55%,#7c3aed 100%)">
+            <div class="mini-badge"><i class="bi bi-geo-alt-fill"></i> San Vicente · O'Higgins</div>
+            <h2>Tu bienestar integral,<br>en manos de <span style="color:#fcd34d">especialistas</span></h2>
+            <p>Equipo multidisciplinario comprometido con tu salud y la de tu familia.</p>
+            <div class="mini-hero-btns">
+              <button class="mini-hero-btn" style="background:#f59e0b;color:#1c1917"><i class="bi bi-whatsapp me-1"></i>Agendar WhatsApp</button>
+              <button class="mini-hero-btn outline">Ver servicios</button>
+            </div>
+          </div>
+          <!-- Cards -->
+          <div class="mini-cards">
+            <div class="mini-card">
+              <div class="mini-card-icon" style="background:#ede9fe;color:#7c3aed"><i class="bi bi-brain"></i></div>
+              <h6>Neurología</h6>
+              <p>Diagnóstico del sistema nervioso.</p>
+              <span class="mini-card-link" style="color:#7c3aed">Ver más →</span>
+            </div>
+            <div class="mini-card">
+              <div class="mini-card-icon" style="background:#fef3c7;color:#d97706"><i class="bi bi-person-heart"></i></div>
+              <h6>Psiquiatría</h6>
+              <p>Salud mental en todas las edades.</p>
+              <span class="mini-card-link" style="color:#7c3aed">Ver más →</span>
+            </div>
+            <div class="mini-card">
+              <div class="mini-card-icon" style="background:#ede9fe;color:#7c3aed"><i class="bi bi-chat-heart"></i></div>
+              <h6>Psicología</h6>
+              <p>Psicoterapia individual y familiar.</p>
+              <span class="mini-card-link" style="color:#7c3aed">Ver más →</span>
+            </div>
+          </div>
+          <!-- Footer -->
+          <div class="mini-footer" style="background:linear-gradient(135deg,#4c1d95,#3b0764)">
+            <div class="mini-footer-brand">Centro Neurodesarrollo · San Vicente</div>
+            <div class="mini-footer-links">
+              <a href="#">Servicios</a>
+              <a href="#">Contacto</a>
+              <a href="#" style="color:#fcd34d">@centroneuro.sv</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       PALETA 2 — VERDE ESMERALDA
+       ======================================================== -->
+  <div class="palette-section" id="paleta-2">
+    <div class="row align-items-start g-4">
+      <div class="col-lg-4">
+        <p class="fw-bold text-uppercase small mb-1" style="color:#059669;letter-spacing:.05em">Paleta 2</p>
+        <h2 class="palette-label" style="color:#064e3b">Verde Esmeralda</h2>
+        <p class="palette-desc">Salud, vitalidad y naturaleza. El verde esmeralda profundo transmite crecimiento, bienestar y confianza. Muy diferente al azul hospitalario tradicional.</p>
+        <div class="swatch-row">
+          <div class="swatch"><div class="swatch-color" style="background:#064e3b"></div><div class="swatch-name">#064e3b<br>Oscuro</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#059669"></div><div class="swatch-name">#059669<br>Principal</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#34d399"></div><div class="swatch-name">#34d399<br>Medio</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#d1fae5"></div><div class="swatch-name">#d1fae5<br>Claro</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#3b82f6"></div><div class="swatch-name">#3b82f6<br>Acento</div></div>
+        </div>
+        <div class="d-flex gap-2 flex-wrap mb-3">
+          <a href="index.html?p=2" class="apply-btn text-white" style="background:#059669">
+            <i class="bi bi-check2-circle"></i>Aplicar esta paleta
+          </a>
+        </div>
+        <p class="small text-muted"><i class="bi bi-lightbulb me-1"></i>Perfecta si quieren evocar salud natural, bienestar y cercanía. Funciona muy bien para el área de nutrición y kinesiología.</p>
+      </div>
+      <div class="col-lg-8">
+        <div class="preview-card">
+          <div class="mini-nav">
+            <div class="mini-brand">
+              <div class="mini-brand-icon" style="background:linear-gradient(135deg,#059669,#064e3b)"><i class="bi bi-heart-pulse-fill"></i></div>
+              <div>
+                <div style="font-size:.8125rem;line-height:1.1;color:#064e3b;font-weight:700">Centro Neurodesarrollo</div>
+                <div style="font-size:.65rem;color:#059669">San Vicente</div>
+              </div>
+            </div>
+            <div class="mini-links">
+              <span class="mini-link" style="color:#059669;background:#d1fae5">Inicio</span>
+              <span class="mini-link">Servicios</span>
+              <span class="mini-link">Talleres</span>
+              <span class="mini-link">Contacto</span>
+            </div>
+            <button class="mini-btn" style="background:linear-gradient(135deg,#059669,#064e3b)">
+              <i class="bi bi-calendar2-check me-1"></i>Agendar
+            </button>
+          </div>
+          <div class="mini-hero" style="background:linear-gradient(135deg,#064e3b 0%,#065f46 55%,#059669 100%)">
+            <div class="mini-badge"><i class="bi bi-geo-alt-fill"></i> San Vicente · O'Higgins</div>
+            <h2>Tu bienestar integral,<br>en manos de <span style="color:#6ee7b7">especialistas</span></h2>
+            <p>Equipo multidisciplinario comprometido con tu salud y la de tu familia.</p>
+            <div class="mini-hero-btns">
+              <button class="mini-hero-btn" style="background:#3b82f6;color:white"><i class="bi bi-whatsapp me-1"></i>Agendar WhatsApp</button>
+              <button class="mini-hero-btn outline">Ver servicios</button>
+            </div>
+          </div>
+          <div class="mini-cards">
+            <div class="mini-card">
+              <div class="mini-card-icon" style="background:#d1fae5;color:#059669"><i class="bi bi-brain"></i></div>
+              <h6>Neurología</h6>
+              <p>Diagnóstico del sistema nervioso.</p>
+              <span class="mini-card-link" style="color:#059669">Ver más →</span>
+            </div>
+            <div class="mini-card">
+              <div class="mini-card-icon" style="background:#dbeafe;color:#3b82f6"><i class="bi bi-person-heart"></i></div>
+              <h6>Psiquiatría</h6>
+              <p>Salud mental en todas las edades.</p>
+              <span class="mini-card-link" style="color:#059669">Ver más →</span>
+            </div>
+            <div class="mini-card">
+              <div class="mini-card-icon" style="background:#d1fae5;color:#059669"><i class="bi bi-chat-heart"></i></div>
+              <h6>Psicología</h6>
+              <p>Psicoterapia individual y familiar.</p>
+              <span class="mini-card-link" style="color:#059669">Ver más →</span>
+            </div>
+          </div>
+          <div class="mini-footer" style="background:linear-gradient(135deg,#064e3b,#022c22)">
+            <div class="mini-footer-brand">Centro Neurodesarrollo · San Vicente</div>
+            <div class="mini-footer-links">
+              <a href="#">Servicios</a>
+              <a href="#">Contacto</a>
+              <a href="#" style="color:#6ee7b7">@centroneuro.sv</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       PALETA 3 — TEAL OCEÁNICO
+       ======================================================== -->
+  <div class="palette-section" id="paleta-3">
+    <div class="row align-items-start g-4">
+      <div class="col-lg-4">
+        <p class="fw-bold text-uppercase small mb-1" style="color:#0d9488;letter-spacing:.05em">Paleta 3</p>
+        <h2 class="palette-label" style="color:#134e4a">Teal Oceánico</h2>
+        <p class="palette-desc">Equilibrio entre el azul clínico y el verde natural. El teal transmite calma, profesionalismo y frescura. El acento naranja aporta energía y calidez.</p>
+        <div class="swatch-row">
+          <div class="swatch"><div class="swatch-color" style="background:#134e4a"></div><div class="swatch-name">#134e4a<br>Oscuro</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#0d9488"></div><div class="swatch-name">#0d9488<br>Principal</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#2dd4bf"></div><div class="swatch-name">#2dd4bf<br>Medio</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#ccfbf1"></div><div class="swatch-name">#ccfbf1<br>Claro</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#f97316"></div><div class="swatch-name">#f97316<br>Acento</div></div>
+        </div>
+        <div class="d-flex gap-2 flex-wrap mb-3">
+          <a href="index.html?p=3" class="apply-btn text-white" style="background:#0d9488">
+            <i class="bi bi-check2-circle"></i>Aplicar esta paleta
+          </a>
+        </div>
+        <p class="small text-muted"><i class="bi bi-lightbulb me-1"></i>Excelente equilibrio entre innovación y confianza. El naranja como acento hace que los CTAs (WhatsApp, agendar) sean muy llamativos.</p>
+      </div>
+      <div class="col-lg-8">
+        <div class="preview-card">
+          <div class="mini-nav">
+            <div class="mini-brand">
+              <div class="mini-brand-icon" style="background:linear-gradient(135deg,#0d9488,#134e4a)"><i class="bi bi-heart-pulse-fill"></i></div>
+              <div>
+                <div style="font-size:.8125rem;line-height:1.1;color:#134e4a;font-weight:700">Centro Neurodesarrollo</div>
+                <div style="font-size:.65rem;color:#0d9488">San Vicente</div>
+              </div>
+            </div>
+            <div class="mini-links">
+              <span class="mini-link" style="color:#0d9488;background:#ccfbf1">Inicio</span>
+              <span class="mini-link">Servicios</span>
+              <span class="mini-link">Talleres</span>
+              <span class="mini-link">Contacto</span>
+            </div>
+            <button class="mini-btn" style="background:linear-gradient(135deg,#0d9488,#134e4a)">
+              <i class="bi bi-calendar2-check me-1"></i>Agendar
+            </button>
+          </div>
+          <div class="mini-hero" style="background:linear-gradient(135deg,#134e4a 0%,#0f766e 55%,#0d9488 100%)">
+            <div class="mini-badge"><i class="bi bi-geo-alt-fill"></i> San Vicente · O'Higgins</div>
+            <h2>Tu bienestar integral,<br>en manos de <span style="color:#99f6e4">especialistas</span></h2>
+            <p>Equipo multidisciplinario comprometido con tu salud y la de tu familia.</p>
+            <div class="mini-hero-btns">
+              <button class="mini-hero-btn" style="background:#f97316;color:white"><i class="bi bi-whatsapp me-1"></i>Agendar WhatsApp</button>
+              <button class="mini-hero-btn outline">Ver servicios</button>
+            </div>
+          </div>
+          <div class="mini-cards">
+            <div class="mini-card">
+              <div class="mini-card-icon" style="background:#ccfbf1;color:#0d9488"><i class="bi bi-brain"></i></div>
+              <h6>Neurología</h6>
+              <p>Diagnóstico del sistema nervioso.</p>
+              <span class="mini-card-link" style="color:#0d9488">Ver más →</span>
+            </div>
+            <div class="mini-card">
+              <div class="mini-card-icon" style="background:#ffedd5;color:#f97316"><i class="bi bi-person-heart"></i></div>
+              <h6>Psiquiatría</h6>
+              <p>Salud mental en todas las edades.</p>
+              <span class="mini-card-link" style="color:#0d9488">Ver más →</span>
+            </div>
+            <div class="mini-card">
+              <div class="mini-card-icon" style="background:#ccfbf1;color:#0d9488"><i class="bi bi-chat-heart"></i></div>
+              <h6>Psicología</h6>
+              <p>Psicoterapia individual y familiar.</p>
+              <span class="mini-card-link" style="color:#0d9488">Ver más →</span>
+            </div>
+          </div>
+          <div class="mini-footer" style="background:linear-gradient(135deg,#134e4a,#042f2e)">
+            <div class="mini-footer-brand">Centro Neurodesarrollo · San Vicente</div>
+            <div class="mini-footer-links">
+              <a href="#">Servicios</a>
+              <a href="#">Contacto</a>
+              <a href="#" style="color:#99f6e4">@centroneuro.sv</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       PALETA 4 — ÍNDIGO DORADO
+       ======================================================== -->
+  <div class="palette-section" id="paleta-4">
+    <div class="row align-items-start g-4">
+      <div class="col-lg-4">
+        <p class="fw-bold text-uppercase small mb-1" style="color:#4f46e5;letter-spacing:.05em">Paleta 4</p>
+        <h2 class="palette-label" style="color:#1e1b4b">Índigo Dorado</h2>
+        <p class="palette-desc">Presencia premium y sofisticada. El índigo profundo con acento dorado-ámbar comunica excelencia, confianza y seriedad profesional. Muy elegante.</p>
+        <div class="swatch-row">
+          <div class="swatch"><div class="swatch-color" style="background:#1e1b4b"></div><div class="swatch-name">#1e1b4b<br>Oscuro</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#4f46e5"></div><div class="swatch-name">#4f46e5<br>Principal</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#818cf8"></div><div class="swatch-name">#818cf8<br>Medio</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#e0e7ff"></div><div class="swatch-name">#e0e7ff<br>Claro</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#eab308"></div><div class="swatch-name">#eab308<br>Dorado</div></div>
+        </div>
+        <div class="d-flex gap-2 flex-wrap mb-3">
+          <a href="index.html?p=4" class="apply-btn text-white" style="background:#4f46e5">
+            <i class="bi bi-check2-circle"></i>Aplicar esta paleta
+          </a>
+        </div>
+        <p class="small text-muted"><i class="bi bi-lightbulb me-1"></i>Ideal para posicionarse como el centro médico premium de la zona. El dorado en botones y CTAs es muy llamativo y elegante.</p>
+      </div>
+      <div class="col-lg-8">
+        <div class="preview-card">
+          <div class="mini-nav">
+            <div class="mini-brand">
+              <div class="mini-brand-icon" style="background:linear-gradient(135deg,#4f46e5,#1e1b4b)"><i class="bi bi-heart-pulse-fill"></i></div>
+              <div>
+                <div style="font-size:.8125rem;line-height:1.1;color:#1e1b4b;font-weight:700">Centro Neurodesarrollo</div>
+                <div style="font-size:.65rem;color:#4f46e5">San Vicente</div>
+              </div>
+            </div>
+            <div class="mini-links">
+              <span class="mini-link" style="color:#4f46e5;background:#e0e7ff">Inicio</span>
+              <span class="mini-link">Servicios</span>
+              <span class="mini-link">Talleres</span>
+              <span class="mini-link">Contacto</span>
+            </div>
+            <button class="mini-btn" style="background:linear-gradient(135deg,#4f46e5,#1e1b4b)">
+              <i class="bi bi-calendar2-check me-1"></i>Agendar
+            </button>
+          </div>
+          <div class="mini-hero" style="background:linear-gradient(135deg,#1e1b4b 0%,#312e81 55%,#4f46e5 100%)">
+            <div class="mini-badge"><i class="bi bi-geo-alt-fill"></i> San Vicente · O'Higgins</div>
+            <h2>Tu bienestar integral,<br>en manos de <span style="color:#fde68a">especialistas</span></h2>
+            <p>Equipo multidisciplinario comprometido con tu salud y la de tu familia.</p>
+            <div class="mini-hero-btns">
+              <button class="mini-hero-btn" style="background:#eab308;color:#1c1917"><i class="bi bi-whatsapp me-1"></i>Agendar WhatsApp</button>
+              <button class="mini-hero-btn outline">Ver servicios</button>
+            </div>
+          </div>
+          <div class="mini-cards">
+            <div class="mini-card">
+              <div class="mini-card-icon" style="background:#e0e7ff;color:#4f46e5"><i class="bi bi-brain"></i></div>
+              <h6>Neurología</h6>
+              <p>Diagnóstico del sistema nervioso.</p>
+              <span class="mini-card-link" style="color:#4f46e5">Ver más →</span>
+            </div>
+            <div class="mini-card">
+              <div class="mini-card-icon" style="background:#fef9c3;color:#ca8a04"><i class="bi bi-person-heart"></i></div>
+              <h6>Psiquiatría</h6>
+              <p>Salud mental en todas las edades.</p>
+              <span class="mini-card-link" style="color:#4f46e5">Ver más →</span>
+            </div>
+            <div class="mini-card">
+              <div class="mini-card-icon" style="background:#e0e7ff;color:#4f46e5"><i class="bi bi-chat-heart"></i></div>
+              <h6>Psicología</h6>
+              <p>Psicoterapia individual y familiar.</p>
+              <span class="mini-card-link" style="color:#4f46e5">Ver más →</span>
+            </div>
+          </div>
+          <div class="mini-footer" style="background:linear-gradient(135deg,#1e1b4b,#0f0e2a)">
+            <div class="mini-footer-brand">Centro Neurodesarrollo · San Vicente</div>
+            <div class="mini-footer-links">
+              <a href="#">Servicios</a>
+              <a href="#">Contacto</a>
+              <a href="#" style="color:#fde68a">@centroneuro.sv</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       PALETA 5 — CORAL VIVO
+       ======================================================== -->
+  <div class="palette-section" id="paleta-5">
+    <div class="row align-items-start g-4">
+      <div class="col-lg-4">
+        <p class="fw-bold text-uppercase small mb-1" style="color:#e11d48;letter-spacing:.05em">Paleta 5</p>
+        <h2 class="palette-label" style="color:#881337">Coral Vivo</h2>
+        <p class="palette-desc">Energía, calidez y dinamismo. El coral/rosa profundo rompe completamente con el azul médico. Transmite cercanía, pasión por la salud y modernidad.</p>
+        <div class="swatch-row">
+          <div class="swatch"><div class="swatch-color" style="background:#881337"></div><div class="swatch-name">#881337<br>Oscuro</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#e11d48"></div><div class="swatch-name">#e11d48<br>Principal</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#fb7185"></div><div class="swatch-name">#fb7185<br>Medio</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#ffe4e6"></div><div class="swatch-name">#ffe4e6<br>Claro</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#0891b2"></div><div class="swatch-name">#0891b2<br>Acento</div></div>
+        </div>
+        <div class="d-flex gap-2 flex-wrap mb-3">
+          <a href="index.html?p=5" class="apply-btn text-white" style="background:#e11d48">
+            <i class="bi bi-check2-circle"></i>Aplicar esta paleta
+          </a>
+        </div>
+        <p class="small text-muted"><i class="bi bi-lightbulb me-1"></i>La más llamativa y diferenciadora. Perfecta para captar atención en redes sociales y que el sitio sea inmediatamente memorable.</p>
+      </div>
+      <div class="col-lg-8">
+        <div class="preview-card">
+          <div class="mini-nav">
+            <div class="mini-brand">
+              <div class="mini-brand-icon" style="background:linear-gradient(135deg,#e11d48,#881337)"><i class="bi bi-heart-pulse-fill"></i></div>
+              <div>
+                <div style="font-size:.8125rem;line-height:1.1;color:#881337;font-weight:700">Centro Neurodesarrollo</div>
+                <div style="font-size:.65rem;color:#e11d48">San Vicente</div>
+              </div>
+            </div>
+            <div class="mini-links">
+              <span class="mini-link" style="color:#e11d48;background:#ffe4e6">Inicio</span>
+              <span class="mini-link">Servicios</span>
+              <span class="mini-link">Talleres</span>
+              <span class="mini-link">Contacto</span>
+            </div>
+            <button class="mini-btn" style="background:linear-gradient(135deg,#e11d48,#881337)">
+              <i class="bi bi-calendar2-check me-1"></i>Agendar
+            </button>
+          </div>
+          <div class="mini-hero" style="background:linear-gradient(135deg,#881337 0%,#be123c 55%,#e11d48 100%)">
+            <div class="mini-badge"><i class="bi bi-geo-alt-fill"></i> San Vicente · O'Higgins</div>
+            <h2>Tu bienestar integral,<br>en manos de <span style="color:#fecdd3">especialistas</span></h2>
+            <p>Equipo multidisciplinario comprometido con tu salud y la de tu familia.</p>
+            <div class="mini-hero-btns">
+              <button class="mini-hero-btn" style="background:#0891b2;color:white"><i class="bi bi-whatsapp me-1"></i>Agendar WhatsApp</button>
+              <button class="mini-hero-btn outline">Ver servicios</button>
+            </div>
+          </div>
+          <div class="mini-cards">
+            <div class="mini-card">
+              <div class="mini-card-icon" style="background:#ffe4e6;color:#e11d48"><i class="bi bi-brain"></i></div>
+              <h6>Neurología</h6>
+              <p>Diagnóstico del sistema nervioso.</p>
+              <span class="mini-card-link" style="color:#e11d48">Ver más →</span>
+            </div>
+            <div class="mini-card">
+              <div class="mini-card-icon" style="background:#cffafe;color:#0891b2"><i class="bi bi-person-heart"></i></div>
+              <h6>Psiquiatría</h6>
+              <p>Salud mental en todas las edades.</p>
+              <span class="mini-card-link" style="color:#e11d48">Ver más →</span>
+            </div>
+            <div class="mini-card">
+              <div class="mini-card-icon" style="background:#ffe4e6;color:#e11d48"><i class="bi bi-chat-heart"></i></div>
+              <h6>Psicología</h6>
+              <p>Psicoterapia individual y familiar.</p>
+              <span class="mini-card-link" style="color:#e11d48">Ver más →</span>
+            </div>
+          </div>
+          <div class="mini-footer" style="background:linear-gradient(135deg,#881337,#4c0519)">
+            <div class="mini-footer-brand">Centro Neurodesarrollo · San Vicente</div>
+            <div class="mini-footer-links">
+              <a href="#">Servicios</a>
+              <a href="#">Contacto</a>
+              <a href="#" style="color:#fda4af">@centroneuro.sv</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       TABLA RESUMEN
+       ======================================================== -->
+  <div class="py-5">
+    <h3 class="font-heading text-center mb-4" style="color:#0f172a">Resumen comparativo</h3>
+    <div class="table-responsive rounded-4 shadow-sm">
+      <table class="table table-hover mb-0 bg-white">
+        <thead style="background:#f8fafc">
+          <tr>
+            <th class="ps-4">Paleta</th>
+            <th>Color principal</th>
+            <th>Acento</th>
+            <th>Sensación</th>
+            <th>Recomendado si…</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="ps-4 fw-bold">
+              <span class="d-inline-block rounded-circle me-2" style="width:14px;height:14px;background:#7c3aed;vertical-align:middle"></span>
+              1 · Violeta Neuro
+            </td>
+            <td><code>#7c3aed</code></td>
+            <td><code>#f59e0b</code> ámbar</td>
+            <td>Innovador, científico</td>
+            <td>Quieren diferenciarse totalmente</td>
+          </tr>
+          <tr>
+            <td class="ps-4 fw-bold">
+              <span class="d-inline-block rounded-circle me-2" style="width:14px;height:14px;background:#059669;vertical-align:middle"></span>
+              2 · Verde Esmeralda
+            </td>
+            <td><code>#059669</code></td>
+            <td><code>#3b82f6</code> azul</td>
+            <td>Salud, vitalidad</td>
+            <td>Énfasis en bienestar y naturalidad</td>
+          </tr>
+          <tr>
+            <td class="ps-4 fw-bold">
+              <span class="d-inline-block rounded-circle me-2" style="width:14px;height:14px;background:#0d9488;vertical-align:middle"></span>
+              3 · Teal Oceánico
+            </td>
+            <td><code>#0d9488</code></td>
+            <td><code>#f97316</code> naranja</td>
+            <td>Calma, equilibrio</td>
+            <td>Quieren algo fresco y moderno</td>
+          </tr>
+          <tr>
+            <td class="ps-4 fw-bold">
+              <span class="d-inline-block rounded-circle me-2" style="width:14px;height:14px;background:#4f46e5;vertical-align:middle"></span>
+              4 · Índigo Dorado
+            </td>
+            <td><code>#4f46e5</code></td>
+            <td><code>#eab308</code> dorado</td>
+            <td>Premium, elegante</td>
+            <td>Posicionarse como centro de excelencia</td>
+          </tr>
+          <tr>
+            <td class="ps-4 fw-bold">
+              <span class="d-inline-block rounded-circle me-2" style="width:14px;height:14px;background:#e11d48;vertical-align:middle"></span>
+              5 · Coral Vivo
+            </td>
+            <td><code>#e11d48</code></td>
+            <td><code>#0891b2</code> cyan</td>
+            <td>Energía, calidez</td>
+            <td>Quieren ser memorables e impactantes</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="alert rounded-4 mt-4 d-flex align-items-start gap-3" style="background:#f0f9ff;border:1px solid #bae6fd">
+      <i class="bi bi-info-circle-fill fs-5 mt-1" style="color:#0284c7;flex-shrink:0"></i>
+      <div>
+        <strong>¿Cómo aplicar la paleta elegida?</strong><br>
+        <span class="text-muted small">Dime el número de la paleta que prefieres y actualizo <code>custom.css</code> completo en segundos. También puedo combinar elementos de dos paletas si lo deseas (por ejemplo violeta con acento naranja).</span>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end container -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
