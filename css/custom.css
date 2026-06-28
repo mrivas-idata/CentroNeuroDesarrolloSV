@@ -1603,3 +1603,27 @@ textarea.form-control { min-height: 120px; resize: vertical; }
   .team-car-item { flex: 0 0 78%; }
   .team-carousel-wrap { padding: 0 2rem; }
 }
+
+
+/* --- Videos (noticias.html) lazy-load --- */
+.video-lazy-wrap {
+  position: relative;
+  overflow: hidden;
+  background: #000;
+}
+.video-lazy-wrap video {
+  display: block;
+  width: 100%;
+}
+.video-play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+.video-lazy-wrap.loaded .video-play-overlay {
+  opacity: 0;
+}
