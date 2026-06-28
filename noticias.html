@@ -103,193 +103,244 @@
   </div>
 </section>
 
-<!-- FILTROS -->
-<div class="bg-white border-bottom py-3">
-  <div class="container">
-    <div class="d-flex flex-wrap gap-2 align-items-center">
-      <span class="small fw-semibold text-muted me-1">Filtrar:</span>
-      <button class="btn btn-sm rounded-pill btn-primary" onclick="filterVideos('all', this)">Todos</button>
-      <button class="btn btn-sm rounded-pill btn-outline-primary" onclick="filterVideos('entrevista', this)">Entrevistas</button>
-      <button class="btn btn-sm rounded-pill btn-outline-primary" onclick="filterVideos('congreso', this)">Congresos</button>
-      <button class="btn btn-sm rounded-pill btn-outline-primary" onclick="filterVideos('institucional', this)">Institucionales</button>
-      <button class="btn btn-sm rounded-pill btn-outline-primary" onclick="filterVideos('taller', this)">Talleres</button>
-    </div>
-  </div>
-</div>
 
-<!-- ===== TALLERES E INSTAGRAM ===== -->
-<section class="py-5" style="background:#fff;">
+<!-- ===== ACTIVIDADES DESTACADAS ===== -->
+<section class="py-5 py-lg-6" style="background:#fff;border-top:1px solid var(--color-primary-light);">
   <div class="container">
 
-    <div class="text-center mb-5">
-      <span class="badge rounded-pill mb-2 px-3 py-2" style="background:var(--color-accent-light);color:var(--color-accent-dark);font-size:.85rem;font-weight:600;">
-        <i class="bi bi-instagram me-1"></i>Desde Instagram
-      </span>
-      <h2 class="font-heading fw-bold" style="color:var(--color-primary-dark)">Talleres y novedades recientes</h2>
-      <p class="text-muted mx-auto" style="max-width:540px">Actividades, talleres y novedades del equipo de Centro Neurodesarrollo San Vicente.</p>
-    </div>
-
-    <!-- ─── Taller Entre Nosotras ─── -->
-    <div class="row g-4 align-items-center mb-5 pb-4" style="border-bottom:1px solid var(--color-primary-light);">
-      <div class="col-lg-5 d-flex justify-content-center">
-        <blockquote class="instagram-media"
-          data-instgrm-permalink="https://www.instagram.com/reel/DZ6BAWCNzTc/"
-          data-instgrm-version="14"
-          style="background:#FFF;border:0;border-radius:12px;box-shadow:var(--shadow-card);margin:0;max-width:400px;min-width:280px;padding:0;width:100%;">
-          <div style="padding:16px;text-align:center;">
-            <a href="https://www.instagram.com/reel/DZ6BAWCNzTc/" target="_blank" rel="noopener noreferrer"
-               style="display:inline-flex;align-items:center;gap:8px;color:var(--color-primary);font-weight:600;text-decoration:none;font-size:.95rem;">
-              <i class="bi bi-instagram" style="font-size:1.4rem;color:#E1306C;"></i>Ver en Instagram
-            </a>
-          </div>
-        </blockquote>
-      </div>
-      <div class="col-lg-7">
-        <span class="badge rounded-pill mb-2 px-3 py-1" style="background:var(--color-accent-light);color:var(--color-accent-dark);font-size:.75rem;">
-          <i class="bi bi-people-fill me-1"></i>Taller
+    <!-- Encabezado de sección -->
+    <div class="row align-items-end mb-5">
+      <div class="col-lg-8">
+        <span class="badge rounded-pill px-3 py-2 mb-3 d-inline-flex align-items-center gap-1"
+              style="background:var(--color-accent-light);color:var(--color-accent-dark);font-size:.8rem;font-weight:600;">
+          <i class="bi bi-instagram"></i>Actividades destacadas
         </span>
-        <h3 class="font-heading fw-bold mb-2" style="color:var(--color-heading);">Taller "Entre Nosotras"</h3>
-        <p class="text-muted small mb-1"><i class="bi bi-calendar3 me-1" style="color:var(--color-primary);"></i><strong>Viernes 3 de Julio · 10:30 a 13:00 hrs</strong></p>
-        <p class="text-muted small mb-3"><i class="bi bi-geo-alt-fill me-1" style="color:var(--color-accent);"></i>Germán Riesco 1367, San Vicente de Tagua Tagua</p>
-        <p class="text-muted mb-3">Un taller pensado para las adolescentes — un verdadero regalo para ellas. Realizado con mucho cariño y profesionalismo por la <strong>psicóloga Estrella Espíndola</strong>.</p>
-        <p class="text-muted mb-3">Temas realmente necesarios conversados en un entorno amoroso y tranquilo, donde además están sus amigas, con una mirada profesional y empática sobre la adolescencia femenina. Un taller que marcará sin duda la vida de tu adolescente.</p>
-        <div class="d-flex align-items-center gap-2 mb-3 p-3 rounded-3" style="background:var(--color-accent-light);">
-          <i class="bi bi-tag-fill" style="color:var(--color-accent);"></i>
-          <span class="small fw-semibold" style="color:var(--color-accent-dark);">Consulta descuento si vas con amigas</span>
-        </div>
-        <a href="https://wa.me/56942488769?text=Hola%2C%20me%20interesa%20el%20Taller%20Entre%20Nosotras"
-           class="btn btn-accent rounded-pill px-4" target="_blank" rel="noopener noreferrer">
-          <i class="bi bi-whatsapp me-2"></i>Consultar e inscribirse
+        <h2 class="font-heading fw-bold mb-2" style="color:var(--color-primary-dark);font-size:1.9rem;">Talleres y novedades recientes</h2>
+        <p class="text-muted mb-0">Talleres, agenda y novedades del equipo de Centro Neurodesarrollo San Vicente.</p>
+      </div>
+      <div class="col-lg-4 d-none d-lg-flex justify-content-end">
+        <a href="https://www.instagram.com/centroneuro.cv" target="_blank" rel="noopener noreferrer"
+           class="btn btn-outline-primary rounded-pill px-4">
+          <i class="bi bi-instagram me-2"></i>Ver Instagram
         </a>
       </div>
     </div>
 
-    <!-- ─── Taller Mi Primera Luna ─── -->
-    <div class="row g-4 align-items-center mb-5 pb-4 flex-lg-row-reverse" style="border-bottom:1px solid var(--color-primary-light);">
-      <div class="col-lg-5">
-        <div class="row g-3 justify-content-center">
-          <div class="col-12 col-sm-6 col-lg-12">
-            <blockquote class="instagram-media"
-              data-instgrm-permalink="https://www.instagram.com/p/DZul7GGu-MC/"
-              data-instgrm-version="14"
-              style="background:#FFF;border:0;border-radius:12px;box-shadow:var(--shadow-card);margin:0;max-width:400px;min-width:280px;padding:0;width:100%;">
-              <div style="padding:16px;text-align:center;">
-                <a href="https://www.instagram.com/p/DZul7GGu-MC/" target="_blank" rel="noopener noreferrer"
-                   style="display:inline-flex;align-items:center;gap:8px;color:var(--color-primary);font-weight:600;text-decoration:none;font-size:.95rem;">
-                  <i class="bi bi-instagram" style="font-size:1.4rem;color:#E1306C;"></i>Ver publicación
-                </a>
-              </div>
-            </blockquote>
-          </div>
-          <div class="col-12 col-sm-6 col-lg-12">
-            <blockquote class="instagram-media"
-              data-instgrm-permalink="https://www.instagram.com/reel/DZlJQ7hpFoP/"
-              data-instgrm-version="14"
-              style="background:#FFF;border:0;border-radius:12px;box-shadow:var(--shadow-card);margin:0;max-width:400px;min-width:280px;padding:0;width:100%;">
-              <div style="padding:16px;text-align:center;">
-                <a href="https://www.instagram.com/reel/DZlJQ7hpFoP/" target="_blank" rel="noopener noreferrer"
-                   style="display:inline-flex;align-items:center;gap:8px;color:var(--color-primary);font-weight:600;text-decoration:none;font-size:.95rem;">
-                  <i class="bi bi-instagram" style="font-size:1.4rem;color:#E1306C;"></i>Ver Reel
-                </a>
-              </div>
-            </blockquote>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-7">
-        <span class="badge rounded-pill mb-2 px-3 py-1" style="background:var(--color-accent-light);color:var(--color-accent-dark);font-size:.75rem;">
-          <i class="bi bi-people-fill me-1"></i>Taller · Niñas 8-12 años
-        </span>
-        <h3 class="font-heading fw-bold mb-2" style="color:var(--color-heading);">Taller "Mi Primera Luna"</h3>
-        <p class="text-muted small mb-1"><i class="bi bi-calendar3 me-1" style="color:var(--color-primary);"></i><strong>Jueves 2 de Julio · 10:30 a 13:00 hrs</strong></p>
-        <p class="text-muted small mb-3"><i class="bi bi-geo-alt-fill me-1" style="color:var(--color-accent);"></i>Centro Neurodesarrollo San Vicente</p>
-        <p class="text-muted mb-3">Un espacio creado especialmente para <strong>niñas entre 8 y 12 años</strong>, donde podrán descubrir y comprender los maravillosos cambios de esta nueva etapa de la vida con alegría, confianza y amor propio.</p>
-        <p class="text-muted mb-3">De la mano de la <strong>psicóloga Estrella Espíndola</strong>, las participantes vivirán una experiencia cercana y respetuosa para hablar sobre el crecimiento, las emociones, el autocuidado y la llegada de la menstruación desde una mirada positiva y natural.</p>
-        <p class="text-muted mb-3">Porque crecer no debe vivirse con miedo ni vergüenza, sino como un momento especial para conocerse, fortalecer la autoestima y conectar con la propia esencia.</p>
-        <div class="d-flex align-items-center gap-2 mb-3 p-3 rounded-3" style="background:var(--color-accent-light);">
-          <i class="bi bi-tag-fill" style="color:var(--color-accent);"></i>
-          <span class="small fw-semibold" style="color:var(--color-accent-dark);">¡Ven con tus amigas y consulta por tu descuento!</span>
-        </div>
-        <a href="https://wa.me/56942488769?text=Hola%2C%20me%20interesa%20el%20Taller%20Mi%20Primera%20Luna"
-           class="btn btn-accent rounded-pill px-4" target="_blank" rel="noopener noreferrer">
-          <i class="bi bi-whatsapp me-2"></i>Consultar e inscribirse
-        </a>
-      </div>
-    </div>
+    <!-- Grid 2×2 de tarjetas -->
+    <div class="row g-4">
 
-    <!-- ─── Dra. Loreto Campos — Psiquiatra Infanto-Juvenil ─── -->
-    <div class="row g-4 align-items-center">
-      <div class="col-lg-5">
-        <div class="row g-3 justify-content-center">
-          <div class="col-12 col-sm-6 col-lg-12">
+      <!-- ─── Invierno Mágico ─── -->
+      <div class="col-md-6">
+        <div class="card border-0 h-100" style="border-radius:var(--radius-card);box-shadow:var(--shadow-card);overflow:hidden;">
+          <div style="background:var(--color-primary-xlight);padding:1.25rem 1.25rem 0;display:flex;justify-content:center;">
             <blockquote class="instagram-media"
               data-instgrm-permalink="https://www.instagram.com/reel/DZc6SK4SQNS/"
               data-instgrm-version="14"
-              style="background:#FFF;border:0;border-radius:12px;box-shadow:var(--shadow-card);margin:0;max-width:400px;min-width:280px;padding:0;width:100%;">
-              <div style="padding:16px;text-align:center;">
+              style="background:#FFF;border:0;border-radius:8px 8px 0 0;margin:0;width:100%;min-width:0;padding:0;">
+              <div style="padding:1.5rem;text-align:center;background:#f5f5f5;border-radius:8px 8px 0 0;">
                 <a href="https://www.instagram.com/reel/DZc6SK4SQNS/" target="_blank" rel="noopener noreferrer"
-                   style="display:inline-flex;align-items:center;gap:8px;color:var(--color-primary);font-weight:600;text-decoration:none;font-size:.95rem;">
-                  <i class="bi bi-instagram" style="font-size:1.4rem;color:#E1306C;"></i>Ver Reel
+                   style="display:inline-flex;align-items:center;gap:8px;color:var(--color-primary);font-weight:600;text-decoration:none;font-size:.9rem;">
+                  <i class="bi bi-instagram" style="font-size:1.3rem;color:#E1306C;"></i>Ver Reel en Instagram
                 </a>
               </div>
             </blockquote>
           </div>
-          <div class="col-12 col-sm-6 col-lg-12">
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="mb-3">
+              <span class="badge rounded-pill me-1 px-2 py-1"
+                    style="background:var(--color-primary-light);color:var(--color-primary-dark);font-size:.72rem;">
+                <i class="bi bi-snow"></i> Taller · Vacaciones invierno
+              </span>
+            </div>
+            <h5 class="font-heading fw-bold mb-2" style="color:var(--color-heading);">❄️ Taller Invierno Mágico ❄️</h5>
+            <p class="small mb-2" style="color:var(--color-text-light);">
+              <i class="bi bi-calendar3 me-1" style="color:var(--color-primary);"></i><strong>22 y 29 de junio</strong>
+              <span class="mx-2">·</span>
+              <i class="bi bi-geo-alt me-1" style="color:var(--color-accent);"></i>Centro Neurodesarrollo SV
+            </p>
+            <p class="small mb-3" style="color:var(--color-text);">
+              Actividades para estimular la creatividad, lenguaje, habilidades sociales y funciones cognitivas. Grupos separados por edades. 🎨 Experimentos, juegos y desafíos.
+            </p>
+            <div class="d-flex align-items-center gap-2 p-2 rounded-2 mb-3"
+                 style="background:var(--color-accent-light);">
+              <i class="bi bi-exclamation-circle-fill small" style="color:var(--color-accent);"></i>
+              <span class="small fw-semibold" style="color:var(--color-accent-dark);">Cupos limitados</span>
+            </div>
+            <a href="https://wa.me/56942488769?text=Hola%2C%20me%20interesa%20el%20Taller%20Invierno%20M%C3%A1gico"
+               class="btn btn-accent rounded-pill mt-auto" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-whatsapp me-2"></i>Consultar e inscribirse
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── Entre Nosotras ─── -->
+      <div class="col-md-6">
+        <div class="card border-0 h-100" style="border-radius:var(--radius-card);box-shadow:var(--shadow-card);overflow:hidden;">
+          <div style="background:var(--color-primary-xlight);padding:1.25rem 1.25rem 0;display:flex;justify-content:center;">
+            <blockquote class="instagram-media"
+              data-instgrm-permalink="https://www.instagram.com/reel/DZ6BAWCNzTc/"
+              data-instgrm-version="14"
+              style="background:#FFF;border:0;border-radius:8px 8px 0 0;margin:0;width:100%;min-width:0;padding:0;">
+              <div style="padding:1.5rem;text-align:center;background:#f5f5f5;border-radius:8px 8px 0 0;">
+                <a href="https://www.instagram.com/reel/DZ6BAWCNzTc/" target="_blank" rel="noopener noreferrer"
+                   style="display:inline-flex;align-items:center;gap:8px;color:var(--color-primary);font-weight:600;text-decoration:none;font-size:.9rem;">
+                  <i class="bi bi-instagram" style="font-size:1.3rem;color:#E1306C;"></i>Ver Reel en Instagram
+                </a>
+              </div>
+            </blockquote>
+          </div>
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="mb-3">
+              <span class="badge rounded-pill me-1 px-2 py-1"
+                    style="background:var(--color-accent-light);color:var(--color-accent-dark);font-size:.72rem;">
+                <i class="bi bi-people-fill"></i> Taller · Adolescentes
+              </span>
+            </div>
+            <h5 class="font-heading fw-bold mb-2" style="color:var(--color-heading);">Taller "Entre Nosotras"</h5>
+            <p class="small mb-2" style="color:var(--color-text-light);">
+              <i class="bi bi-calendar3 me-1" style="color:var(--color-primary);"></i><strong>Viernes 3 de julio · 10:30–13:00</strong>
+              <br>
+              <i class="bi bi-geo-alt me-1" style="color:var(--color-accent);"></i>Germán Riesco 1367, San Vicente
+            </p>
+            <p class="small mb-3" style="color:var(--color-text);">
+              Espacio amoroso y profesional para adolescentes. Temas de la adolescencia femenina con la Psicóloga <strong>Estrella Espíndola</strong>. Un regalo para tu adolescente.
+            </p>
+            <div class="d-flex align-items-center gap-2 p-2 rounded-2 mb-3"
+                 style="background:var(--color-accent-light);">
+              <i class="bi bi-tag-fill small" style="color:var(--color-accent);"></i>
+              <span class="small fw-semibold" style="color:var(--color-accent-dark);">Descuento por grupo</span>
+            </div>
+            <a href="https://wa.me/56942488769?text=Hola%2C%20me%20interesa%20el%20Taller%20Entre%20Nosotras"
+               class="btn btn-accent rounded-pill mt-auto" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-whatsapp me-2"></i>Consultar e inscribirse
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── Mi Primera Luna ─── -->
+      <div class="col-md-6">
+        <div class="card border-0 h-100" style="border-radius:var(--radius-card);box-shadow:var(--shadow-card);overflow:hidden;">
+          <div style="background:var(--color-primary-xlight);padding:1.25rem 1.25rem 0;display:flex;justify-content:center;">
+            <blockquote class="instagram-media"
+              data-instgrm-permalink="https://www.instagram.com/p/DZul7GGu-MC/"
+              data-instgrm-version="14"
+              style="background:#FFF;border:0;border-radius:8px 8px 0 0;margin:0;width:100%;min-width:0;padding:0;">
+              <div style="padding:1.5rem;text-align:center;background:#f5f5f5;border-radius:8px 8px 0 0;">
+                <a href="https://www.instagram.com/p/DZul7GGu-MC/" target="_blank" rel="noopener noreferrer"
+                   style="display:inline-flex;align-items:center;gap:8px;color:var(--color-primary);font-weight:600;text-decoration:none;font-size:.9rem;">
+                  <i class="bi bi-instagram" style="font-size:1.3rem;color:#E1306C;"></i>Ver publicación en Instagram
+                </a>
+              </div>
+            </blockquote>
+          </div>
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="mb-3">
+              <span class="badge rounded-pill me-1 px-2 py-1"
+                    style="background:var(--color-accent-light);color:var(--color-accent-dark);font-size:.72rem;">
+                <i class="bi bi-heart-fill"></i> Taller · Niñas 8–12 años
+              </span>
+            </div>
+            <h5 class="font-heading fw-bold mb-2" style="color:var(--color-heading);">Taller "Mi Primera Luna"</h5>
+            <p class="small mb-2" style="color:var(--color-text-light);">
+              <i class="bi bi-calendar3 me-1" style="color:var(--color-primary);"></i><strong>Jueves 2 de julio · 10:30–13:00</strong>
+              <br>
+              <i class="bi bi-geo-alt me-1" style="color:var(--color-accent);"></i>Centro Neurodesarrollo SV
+            </p>
+            <p class="small mb-3" style="color:var(--color-text);">
+              Espacio seguro para hablar sobre crecimiento, emociones y autocuidado desde una mirada positiva. Con la Psicóloga <strong>Estrella Espíndola</strong>.
+            </p>
+            <div class="d-flex align-items-center gap-2 p-2 rounded-2 mb-3"
+                 style="background:var(--color-accent-light);">
+              <i class="bi bi-tag-fill small" style="color:var(--color-accent);"></i>
+              <span class="small fw-semibold" style="color:var(--color-accent-dark);">¡Ven con tus amigas!</span>
+            </div>
+            <a href="https://wa.me/56942488769?text=Hola%2C%20me%20interesa%20el%20Taller%20Mi%20Primera%20Luna"
+               class="btn btn-accent rounded-pill mt-auto" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-whatsapp me-2"></i>Consultar e inscribirse
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── Dra. Loreto Campos ─── -->
+      <div class="col-md-6">
+        <div class="card border-0 h-100" style="border-radius:var(--radius-card);box-shadow:var(--shadow-card);overflow:hidden;">
+          <div style="background:var(--color-primary-xlight);padding:1.25rem 1.25rem 0;display:flex;justify-content:center;">
             <blockquote class="instagram-media"
               data-instgrm-permalink="https://www.instagram.com/reel/DY7XD1wOpx7/"
               data-instgrm-version="14"
-              style="background:#FFF;border:0;border-radius:12px;box-shadow:var(--shadow-card);margin:0;max-width:400px;min-width:280px;padding:0;width:100%;">
-              <div style="padding:16px;text-align:center;">
+              style="background:#FFF;border:0;border-radius:8px 8px 0 0;margin:0;width:100%;min-width:0;padding:0;">
+              <div style="padding:1.5rem;text-align:center;background:#f5f5f5;border-radius:8px 8px 0 0;">
                 <a href="https://www.instagram.com/reel/DY7XD1wOpx7/" target="_blank" rel="noopener noreferrer"
-                   style="display:inline-flex;align-items:center;gap:8px;color:var(--color-primary);font-weight:600;text-decoration:none;font-size:.95rem;">
-                  <i class="bi bi-instagram" style="font-size:1.4rem;color:#E1306C;"></i>Ver Reel
+                   style="display:inline-flex;align-items:center;gap:8px;color:var(--color-primary);font-weight:600;text-decoration:none;font-size:.9rem;">
+                  <i class="bi bi-instagram" style="font-size:1.3rem;color:#E1306C;"></i>Ver Reel en Instagram
                 </a>
               </div>
             </blockquote>
           </div>
-        </div>
-      </div>
-      <div class="col-lg-7">
-        <span class="badge rounded-pill mb-2 px-3 py-1" style="background:var(--color-primary-light);color:var(--color-primary-dark);font-size:.75rem;">
-          <i class="bi bi-calendar2-check me-1"></i>Agenda disponible
-        </span>
-        <h3 class="font-heading fw-bold mb-2" style="color:var(--color-heading);">Agenda abierta — Psiquiatría Infanto-Juvenil</h3>
-        <p class="text-muted mb-3">La <strong>Dra. Loreto Campos Fuentes</strong>, Psiquiatra Infanto-Juvenil, tiene agenda disponible para atención de niños y adolescentes en Centro Neurodesarrollo San Vicente.</p>
-        <div class="d-flex align-items-start gap-3 p-3 rounded-3 mb-4" style="background:var(--color-primary-xlight);">
-          <i class="bi bi-person-badge-fill fs-4 flex-shrink-0" style="color:var(--color-primary);"></i>
-          <div>
-            <p class="fw-semibold mb-0" style="color:var(--color-primary-dark);">Dra. Loreto Campos Fuentes</p>
-            <p class="small text-muted mb-0">Médico Psiquiatra Infanto-Juvenil · Niños y adolescentes</p>
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="mb-3">
+              <span class="badge rounded-pill me-1 px-2 py-1"
+                    style="background:var(--color-primary-light);color:var(--color-primary-dark);font-size:.72rem;">
+                <i class="bi bi-calendar2-check"></i> Agenda disponible
+              </span>
+            </div>
+            <h5 class="font-heading fw-bold mb-2" style="color:var(--color-heading);">Agenda — Psiquiatría Infanto-Juvenil</h5>
+            <p class="small mb-2" style="color:var(--color-text-light);">
+              <i class="bi bi-person-badge me-1" style="color:var(--color-primary);"></i><strong>Dra. Loreto Campos Fuentes</strong>
+              <br>
+              <i class="bi bi-geo-alt me-1" style="color:var(--color-accent);"></i>Centro Neurodesarrollo SV
+            </p>
+            <p class="small mb-3" style="color:var(--color-text);">
+              Psiquiatra Infanto-Juvenil con agenda disponible para niños y adolescentes. Atención especializada en salud mental de la infancia y adolescencia.
+            </p>
+            <div class="d-flex align-items-center gap-2 p-2 rounded-2 mb-3"
+                 style="background:var(--color-primary-xlight);">
+              <i class="bi bi-check-circle-fill small" style="color:var(--color-primary);"></i>
+              <span class="small fw-semibold" style="color:var(--color-primary-dark);">Hora disponible — agenda ahora</span>
+            </div>
+            <a href="https://wa.me/56942488769?text=Hola%2C%20quisiera%20agendar%20con%20la%20Dra.%20Loreto%20Campos"
+               class="btn btn-primary rounded-pill mt-auto" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-whatsapp me-2"></i>Agendar hora
+            </a>
           </div>
         </div>
-        <a href="https://wa.me/56942488769?text=Hola%2C%20quisiera%20agendar%20con%20la%20Dra.%20Loreto%20Campos"
-           class="btn btn-primary rounded-pill px-4" target="_blank" rel="noopener noreferrer">
-          <i class="bi bi-whatsapp me-2"></i>Agendar hora ahora
-        </a>
       </div>
-    </div>
 
+    </div><!-- /row -->
   </div>
 </section>
 
-<!-- VIDEOS GRID -->
-<section class="py-5" style="background:var(--color-bg);">
+<!-- ===== GALERÍA DE VIDEOS ===== -->
+<section class="py-5 py-lg-6" style="background:var(--color-bg);">
   <div class="container">
-    <div class="row g-4" id="videoGrid">
 
-      <div class="col-md-6 col-lg-4 video-card" data-category="institucional">
-        <div class="card h-100 border-0 rounded-3" style="box-shadow:var(--shadow-card);overflow:hidden;">
-          <video class="w-100" style="aspect-ratio:16/9;width:100%;background:#111;display:block;" controls preload="none">
-            <source src="assets/video/021b5590-e822-465b-827a-7d70c631be38.mp4" type="video/mp4">
-          </video>
-          <div class="card-body">
-            <span class="badge rounded-pill mb-2" style="background:var(--color-primary-light);color:var(--color-primary-dark);font-size:.72rem;">Institucional</span>
-            <h6 class="font-heading fw-bold mb-1" style="color:var(--color-heading);">Video 1</h6>
-            <p class="small text-muted mb-0">Centro Neurodesarrollo San Vicente</p>
-          </div>
+    <!-- Encabezado + filtros -->
+    <div class="row align-items-end mb-4">
+      <div class="col-lg-6 mb-3 mb-lg-0">
+        <span class="badge rounded-pill px-3 py-2 mb-2 d-inline-flex align-items-center gap-1"
+              style="background:var(--color-primary-light);color:var(--color-primary-dark);font-size:.8rem;font-weight:600;">
+          <i class="bi bi-camera-video-fill"></i>Videos
+        </span>
+        <h2 class="font-heading fw-bold mb-1" style="color:var(--color-primary-dark);font-size:1.9rem;">Galería de Videos</h2>
+        <p class="text-muted mb-0">Entrevistas, contenido profesional y presencia institucional del centro.</p>
+      </div>
+      <div class="col-lg-6">
+        <div class="d-flex flex-wrap gap-2 justify-content-lg-end">
+          <button class="btn btn-sm rounded-pill btn-primary" onclick="filterVideos('all', this)">Todos</button>
+          <button class="btn btn-sm rounded-pill btn-outline-primary" onclick="filterVideos('institucional', this)">Institucionales</button>
+          <button class="btn btn-sm rounded-pill btn-outline-primary" onclick="filterVideos('profesional', this)">Profesional</button>
+          <button class="btn btn-sm rounded-pill btn-outline-primary" onclick="filterVideos('entrevista', this)">Entrevistas</button>
+          <button class="btn btn-sm rounded-pill btn-outline-primary" onclick="filterVideos('congreso', this)">Congresos</button>
         </div>
       </div>
+    </div>
 
+    <div class="row g-4" id="videoGrid">
+
+      <!-- #2 071fd74e -->
       <div class="col-md-6 col-lg-4 video-card" data-category="institucional">
         <div class="card h-100 border-0 rounded-3" style="box-shadow:var(--shadow-card);overflow:hidden;">
           <video class="w-100" style="aspect-ratio:16/9;width:100%;background:#111;display:block;" controls preload="none">
@@ -297,12 +348,13 @@
           </video>
           <div class="card-body">
             <span class="badge rounded-pill mb-2" style="background:var(--color-primary-light);color:var(--color-primary-dark);font-size:.72rem;">Institucional</span>
-            <h6 class="font-heading fw-bold mb-1" style="color:var(--color-heading);">Video 2</h6>
-            <p class="small text-muted mb-0">Centro Neurodesarrollo San Vicente</p>
+            <h6 class="font-heading fw-bold mb-1" style="color:var(--color-heading);">Nuestro centro</h6>
+            <p class="small text-muted mb-0">Invitación a conocer nuestro centro de Neurodesarrollo San Vicente, donde tu salud nos importa.</p>
           </div>
         </div>
       </div>
 
+      <!-- #3 354fbaeb -->
       <div class="col-md-6 col-lg-4 video-card" data-category="institucional">
         <div class="card h-100 border-0 rounded-3" style="box-shadow:var(--shadow-card);overflow:hidden;">
           <video class="w-100" style="aspect-ratio:16/9;width:100%;background:#111;display:block;" controls preload="none">
@@ -310,25 +362,13 @@
           </video>
           <div class="card-body">
             <span class="badge rounded-pill mb-2" style="background:var(--color-primary-light);color:var(--color-primary-dark);font-size:.72rem;">Institucional</span>
-            <h6 class="font-heading fw-bold mb-1" style="color:var(--color-heading);">Video 3</h6>
-            <p class="small text-muted mb-0">Centro Neurodesarrollo San Vicente</p>
+            <h6 class="font-heading fw-bold mb-1" style="color:var(--color-heading);">Entrevistas en Radio</h6>
+            <p class="small text-muted mb-0">En Centro Neurodesarrollo San Vicente tu salud nos importa.</p>
           </div>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4 video-card" data-category="institucional">
-        <div class="card h-100 border-0 rounded-3" style="box-shadow:var(--shadow-card);overflow:hidden;">
-          <video class="w-100" style="aspect-ratio:16/9;width:100%;background:#111;display:block;" controls preload="none">
-            <source src="assets/video/6208a22a-6b73-434c-9b43-7d261f29e03c.mp4" type="video/mp4">
-          </video>
-          <div class="card-body">
-            <span class="badge rounded-pill mb-2" style="background:var(--color-primary-light);color:var(--color-primary-dark);font-size:.72rem;">Institucional</span>
-            <h6 class="font-heading fw-bold mb-1" style="color:var(--color-heading);">Video 4</h6>
-            <p class="small text-muted mb-0">Centro Neurodesarrollo San Vicente</p>
-          </div>
-        </div>
-      </div>
-
+      <!-- #5 661463e7 -->
       <div class="col-md-6 col-lg-4 video-card" data-category="institucional">
         <div class="card h-100 border-0 rounded-3" style="box-shadow:var(--shadow-card);overflow:hidden;">
           <video class="w-100" style="aspect-ratio:16/9;width:100%;background:#111;display:block;" controls preload="none">
@@ -336,12 +376,13 @@
           </video>
           <div class="card-body">
             <span class="badge rounded-pill mb-2" style="background:var(--color-primary-light);color:var(--color-primary-dark);font-size:.72rem;">Institucional</span>
-            <h6 class="font-heading fw-bold mb-1" style="color:var(--color-heading);">Video 5</h6>
-            <p class="small text-muted mb-0">Centro Neurodesarrollo San Vicente</p>
+            <h6 class="font-heading fw-bold mb-1" style="color:var(--color-heading);">¿Sabías que las pantallas pueden generar adicciones?</h6>
+            <p class="small text-muted mb-0">En Centro Neurodesarrollo San Vicente tu salud nos importa.</p>
           </div>
         </div>
       </div>
 
+      <!-- #6 7a3a9820 -->
       <div class="col-md-6 col-lg-4 video-card" data-category="institucional">
         <div class="card h-100 border-0 rounded-3" style="box-shadow:var(--shadow-card);overflow:hidden;">
           <video class="w-100" style="aspect-ratio:16/9;width:100%;background:#111;display:block;" controls preload="none">
@@ -349,12 +390,13 @@
           </video>
           <div class="card-body">
             <span class="badge rounded-pill mb-2" style="background:var(--color-primary-light);color:var(--color-primary-dark);font-size:.72rem;">Institucional</span>
-            <h6 class="font-heading fw-bold mb-1" style="color:var(--color-heading);">Video 6</h6>
-            <p class="small text-muted mb-0">Centro Neurodesarrollo San Vicente</p>
+            <h6 class="font-heading fw-bold mb-1" style="color:var(--color-heading);">Nuestro centro</h6>
+            <p class="small text-muted mb-0">En Centro Neurodesarrollo San Vicente tu salud nos importa.</p>
           </div>
         </div>
       </div>
 
+      <!-- #7 7ac47a9f -->
       <div class="col-md-6 col-lg-4 video-card" data-category="institucional">
         <div class="card h-100 border-0 rounded-3" style="box-shadow:var(--shadow-card);overflow:hidden;">
           <video class="w-100" style="aspect-ratio:16/9;width:100%;background:#111;display:block;" controls preload="none">
@@ -362,38 +404,13 @@
           </video>
           <div class="card-body">
             <span class="badge rounded-pill mb-2" style="background:var(--color-primary-light);color:var(--color-primary-dark);font-size:.72rem;">Institucional</span>
-            <h6 class="font-heading fw-bold mb-1" style="color:var(--color-heading);">Video 7</h6>
-            <p class="small text-muted mb-0">Centro Neurodesarrollo San Vicente</p>
+            <h6 class="font-heading fw-bold mb-1" style="color:var(--color-heading);">Atenciones Recap</h6>
+            <p class="small text-muted mb-0">En Centro Neurodesarrollo San Vicente tu salud nos importa.</p>
           </div>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4 video-card" data-category="institucional">
-        <div class="card h-100 border-0 rounded-3" style="box-shadow:var(--shadow-card);overflow:hidden;">
-          <video class="w-100" style="aspect-ratio:16/9;width:100%;background:#111;display:block;" controls preload="none">
-            <source src="assets/video/8b966f41-4bd9-4aee-9a59-9854ffa618e6.mp4" type="video/mp4">
-          </video>
-          <div class="card-body">
-            <span class="badge rounded-pill mb-2" style="background:var(--color-primary-light);color:var(--color-primary-dark);font-size:.72rem;">Institucional</span>
-            <h6 class="font-heading fw-bold mb-1" style="color:var(--color-heading);">Video 8</h6>
-            <p class="small text-muted mb-0">Centro Neurodesarrollo San Vicente</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4 video-card" data-category="institucional">
-        <div class="card h-100 border-0 rounded-3" style="box-shadow:var(--shadow-card);overflow:hidden;">
-          <video class="w-100" style="aspect-ratio:16/9;width:100%;background:#111;display:block;" controls preload="none">
-            <source src="assets/video/93d9770a-3468-47e4-abbf-07f079fc4d69.mp4" type="video/mp4">
-          </video>
-          <div class="card-body">
-            <span class="badge rounded-pill mb-2" style="background:var(--color-primary-light);color:var(--color-primary-dark);font-size:.72rem;">Institucional</span>
-            <h6 class="font-heading fw-bold mb-1" style="color:var(--color-heading);">Video 9</h6>
-            <p class="small text-muted mb-0">Centro Neurodesarrollo San Vicente</p>
-          </div>
-        </div>
-      </div>
-
+      <!-- #10 9aedc909 -->
       <div class="col-md-6 col-lg-4 video-card" data-category="institucional">
         <div class="card h-100 border-0 rounded-3" style="box-shadow:var(--shadow-card);overflow:hidden;">
           <video class="w-100" style="aspect-ratio:16/9;width:100%;background:#111;display:block;" controls preload="none">
@@ -401,12 +418,13 @@
           </video>
           <div class="card-body">
             <span class="badge rounded-pill mb-2" style="background:var(--color-primary-light);color:var(--color-primary-dark);font-size:.72rem;">Institucional</span>
-            <h6 class="font-heading fw-bold mb-1" style="color:var(--color-heading);">Video 10</h6>
-            <p class="small text-muted mb-0">Centro Neurodesarrollo San Vicente</p>
+            <h6 class="font-heading fw-bold mb-1" style="color:var(--color-heading);">Explicar con peras y manzanas</h6>
+            <p class="small text-muted mb-0">En Centro Neurodesarrollo San Vicente tu salud nos importa.</p>
           </div>
         </div>
       </div>
 
+      <!-- #11 a3ee4d45 -->
       <div class="col-md-6 col-lg-4 video-card" data-category="institucional">
         <div class="card h-100 border-0 rounded-3" style="box-shadow:var(--shadow-card);overflow:hidden;">
           <video class="w-100" style="aspect-ratio:16/9;width:100%;background:#111;display:block;" controls preload="none">
@@ -414,51 +432,41 @@
           </video>
           <div class="card-body">
             <span class="badge rounded-pill mb-2" style="background:var(--color-primary-light);color:var(--color-primary-dark);font-size:.72rem;">Institucional</span>
-            <h6 class="font-heading fw-bold mb-1" style="color:var(--color-heading);">Video 11</h6>
-            <p class="small text-muted mb-0">Centro Neurodesarrollo San Vicente</p>
+            <h6 class="font-heading fw-bold mb-1" style="color:var(--color-heading);">Horas de atención área Neurología</h6>
+            <p class="small text-muted mb-0">En Centro Neurodesarrollo San Vicente tu salud nos importa.</p>
           </div>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4 video-card" data-category="institucional">
-        <div class="card h-100 border-0 rounded-3" style="box-shadow:var(--shadow-card);overflow:hidden;">
-          <video class="w-100" style="aspect-ratio:16/9;width:100%;background:#111;display:block;" controls preload="none">
-            <source src="assets/video/ac997199-e1ea-437f-8f5e-d5b43de7a936.mp4" type="video/mp4">
-          </video>
-          <div class="card-body">
-            <span class="badge rounded-pill mb-2" style="background:var(--color-primary-light);color:var(--color-primary-dark);font-size:.72rem;">Institucional</span>
-            <h6 class="font-heading fw-bold mb-1" style="color:var(--color-heading);">Video 12</h6>
-            <p class="small text-muted mb-0">Centro Neurodesarrollo San Vicente</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4 video-card" data-category="institucional">
+      <!-- #13 aedc6156 -->
+      <div class="col-md-6 col-lg-4 video-card" data-category="profesional">
         <div class="card h-100 border-0 rounded-3" style="box-shadow:var(--shadow-card);overflow:hidden;">
           <video class="w-100" style="aspect-ratio:16/9;width:100%;background:#111;display:block;" controls preload="none">
             <source src="assets/video/aedc6156-2a50-45af-96ab-3fa00bd71e27.mp4" type="video/mp4">
           </video>
           <div class="card-body">
-            <span class="badge rounded-pill mb-2" style="background:var(--color-primary-light);color:var(--color-primary-dark);font-size:.72rem;">Institucional</span>
-            <h6 class="font-heading fw-bold mb-1" style="color:var(--color-heading);">Video 13</h6>
-            <p class="small text-muted mb-0">Centro Neurodesarrollo San Vicente</p>
+            <span class="badge rounded-pill mb-2" style="background:var(--color-accent-light);color:var(--color-accent-dark);font-size:.72rem;">Profesional</span>
+            <h6 class="font-heading fw-bold mb-1" style="color:var(--color-heading);">¿Qué es el curriculum?</h6>
+            <p class="small text-muted mb-0">María Jesús Campos · Curriculista</p>
           </div>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4 video-card" data-category="institucional">
+      <!-- #14 b2540a41 -->
+      <div class="col-md-6 col-lg-4 video-card" data-category="profesional">
         <div class="card h-100 border-0 rounded-3" style="box-shadow:var(--shadow-card);overflow:hidden;">
           <video class="w-100" style="aspect-ratio:16/9;width:100%;background:#111;display:block;" controls preload="none">
             <source src="assets/video/b2540a41-f5ae-4f70-b033-026bfb1de553.mp4" type="video/mp4">
           </video>
           <div class="card-body">
-            <span class="badge rounded-pill mb-2" style="background:var(--color-primary-light);color:var(--color-primary-dark);font-size:.72rem;">Institucional</span>
-            <h6 class="font-heading fw-bold mb-1" style="color:var(--color-heading);">Video 14</h6>
-            <p class="small text-muted mb-0">Centro Neurodesarrollo San Vicente</p>
+            <span class="badge rounded-pill mb-2" style="background:var(--color-accent-light);color:var(--color-accent-dark);font-size:.72rem;">Profesional</span>
+            <h6 class="font-heading fw-bold mb-1" style="color:var(--color-heading);">Terapeuta ocupacional especializado en confección de ortesis y ayudas técnicas</h6>
+            <p class="small text-muted mb-0">Gonzalo Donoso Aros · Terapeuta Ocupacional</p>
           </div>
         </div>
       </div>
 
+      <!-- #15 b2c89155 -->
       <div class="col-md-6 col-lg-4 video-card" data-category="institucional">
         <div class="card h-100 border-0 rounded-3" style="box-shadow:var(--shadow-card);overflow:hidden;">
           <video class="w-100" style="aspect-ratio:16/9;width:100%;background:#111;display:block;" controls preload="none">
@@ -466,25 +474,13 @@
           </video>
           <div class="card-body">
             <span class="badge rounded-pill mb-2" style="background:var(--color-primary-light);color:var(--color-primary-dark);font-size:.72rem;">Institucional</span>
-            <h6 class="font-heading fw-bold mb-1" style="color:var(--color-heading);">Video 15</h6>
-            <p class="small text-muted mb-0">Centro Neurodesarrollo San Vicente</p>
+            <h6 class="font-heading fw-bold mb-1" style="color:var(--color-heading);">Problemas de salud mental</h6>
+            <p class="small text-muted mb-0">En Centro Neurodesarrollo San Vicente tu salud nos importa.</p>
           </div>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4 video-card" data-category="institucional">
-        <div class="card h-100 border-0 rounded-3" style="box-shadow:var(--shadow-card);overflow:hidden;">
-          <video class="w-100" style="aspect-ratio:16/9;width:100%;background:#111;display:block;" controls preload="none">
-            <source src="assets/video/b7606288-c598-4324-8f5f-d82ea2a88311.mp4" type="video/mp4">
-          </video>
-          <div class="card-body">
-            <span class="badge rounded-pill mb-2" style="background:var(--color-primary-light);color:var(--color-primary-dark);font-size:.72rem;">Institucional</span>
-            <h6 class="font-heading fw-bold mb-1" style="color:var(--color-heading);">Video 16</h6>
-            <p class="small text-muted mb-0">Centro Neurodesarrollo San Vicente</p>
-          </div>
-        </div>
-      </div>
-
+      <!-- #17 d662f4ef -->
       <div class="col-md-6 col-lg-4 video-card" data-category="institucional">
         <div class="card h-100 border-0 rounded-3" style="box-shadow:var(--shadow-card);overflow:hidden;">
           <video class="w-100" style="aspect-ratio:16/9;width:100%;background:#111;display:block;" controls preload="none">
@@ -492,12 +488,13 @@
           </video>
           <div class="card-body">
             <span class="badge rounded-pill mb-2" style="background:var(--color-primary-light);color:var(--color-primary-dark);font-size:.72rem;">Institucional</span>
-            <h6 class="font-heading fw-bold mb-1" style="color:var(--color-heading);">Video 17</h6>
-            <p class="small text-muted mb-0">Centro Neurodesarrollo San Vicente</p>
+            <h6 class="font-heading fw-bold mb-1" style="color:var(--color-heading);">Nuestro centro</h6>
+            <p class="small text-muted mb-0">En Centro Neurodesarrollo San Vicente tu salud nos importa.</p>
           </div>
         </div>
       </div>
 
+      <!-- #18 e7939d14 -->
       <div class="col-md-6 col-lg-4 video-card" data-category="institucional">
         <div class="card h-100 border-0 rounded-3" style="box-shadow:var(--shadow-card);overflow:hidden;">
           <video class="w-100" style="aspect-ratio:16/9;width:100%;background:#111;display:block;" controls preload="none">
@@ -505,33 +502,29 @@
           </video>
           <div class="card-body">
             <span class="badge rounded-pill mb-2" style="background:var(--color-primary-light);color:var(--color-primary-dark);font-size:.72rem;">Institucional</span>
-            <h6 class="font-heading fw-bold mb-1" style="color:var(--color-heading);">Video 18</h6>
-            <p class="small text-muted mb-0">Centro Neurodesarrollo San Vicente</p>
+            <h6 class="font-heading fw-bold mb-1" style="color:var(--color-heading);">Lo más importante es tu opinión</h6>
+            <p class="small text-muted mb-0">En Centro Neurodesarrollo San Vicente tu salud nos importa.</p>
           </div>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4 video-card" data-category="institucional">
+      <!-- #19 fbf5d165 -->
+      <div class="col-md-6 col-lg-4 video-card" data-category="profesional">
         <div class="card h-100 border-0 rounded-3" style="box-shadow:var(--shadow-card);overflow:hidden;">
           <video class="w-100" style="aspect-ratio:16/9;width:100%;background:#111;display:block;" controls preload="none">
             <source src="assets/video/fbf5d165-4ff8-494a-b738-4c153bc64d62.mp4" type="video/mp4">
           </video>
           <div class="card-body">
-            <span class="badge rounded-pill mb-2" style="background:var(--color-primary-light);color:var(--color-primary-dark);font-size:.72rem;">Institucional</span>
-            <h6 class="font-heading fw-bold mb-1" style="color:var(--color-heading);">Video 19</h6>
-            <p class="small text-muted mb-0">Centro Neurodesarrollo San Vicente</p>
+            <span class="badge rounded-pill mb-2" style="background:var(--color-accent-light);color:var(--color-accent-dark);font-size:.72rem;">Profesional</span>
+            <h6 class="font-heading fw-bold mb-1" style="color:var(--color-heading);">¿Sabías que un niño de 2 años, debe decir al menos 50 palabras?</h6>
+            <p class="small text-muted mb-0">Constanza Luque · Fonoaudióloga</p>
           </div>
         </div>
       </div>
 
+
     </div><!-- /videoGrid -->
 
-    <!-- Aviso editable -->
-    <div class="text-center mt-5 py-4 px-4 rounded-3" style="background:var(--color-primary-xlight);border:1px dashed var(--color-primary-light);">
-      <i class="bi bi-info-circle" style="color:var(--color-primary);font-size:1.5rem;"></i>
-      <p class="mb-1 mt-2 fw-semibold" style="color:var(--color-primary-dark);">Títulos y descripciones pendientes</p>
-      <p class="small text-muted mb-0">Los videos están cargados. Comparte con nosotros el título, profesional y contexto de cada video para completar esta sección.</p>
-    </div>
 
   </div>
 </section>
