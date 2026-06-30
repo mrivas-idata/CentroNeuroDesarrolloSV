@@ -42,6 +42,7 @@ const form = document.getElementById('contactForm');
 if (form) {
   form.addEventListener('submit', function (e) {
     e.preventDefault();
+    if (form.querySelector('[name="_gotcha"]')?.value.trim()) return;
     if (!form.checkValidity()) {
       form.classList.add('was-validated');
       form.querySelector(':invalid')?.focus();

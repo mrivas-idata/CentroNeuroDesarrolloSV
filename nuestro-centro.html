@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="es">
+<html lang="es-CL">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,6 +43,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon/favicon-96x96.png">
   <link rel="apple-touch-icon" href="assets/img/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -73,7 +74,7 @@
 <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="mainNav">
   <div class="container">
     <a class="navbar-brand py-1" href="index.html">
-      <img src="assets/img/logo-transparent-original-canvas.png" alt="Centro Neurodesarrollo San Vicente" class="navbar-logo">
+      <img src="assets/img/logo-transparent-original-canvas.png" alt="Centro Neurodesarrollo San Vicente" class="navbar-logo" width="297" height="144">
     </a>
     <div class="navbar-brand-divider d-none d-lg-flex align-items-center"></div>
     <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Abrir menú">
@@ -129,214 +130,186 @@
   </div>
 </section>
 
-<!-- CARRUSEL DE INSTALACIONES -->
-<section class="py-5" style="background:#E8E8E8;">
-  <div class="container">
-    <div class="text-center mb-4">
-      <span class="badge rounded-pill mb-2 px-3 py-2" style="background:var(--color-primary-light);color:var(--color-primary-dark);font-size:.85rem;font-weight:600;">
-        <i class="bi bi-images me-1"></i>Galería
-      </span>
-      <h2 class="font-heading fw-bold" style="color:var(--color-primary-dark)">Conoce nuestras instalaciones</h2>
-      <p class="text-muted">Espacios cuidadosamente diseñados para tu bienestar y el de tu familia</p>
+<!-- GALERÍA DE INSTALACIONES -->
+<section class="py-5 py-lg-6" style="background:var(--color-bg);">
+
+  <div id="galleryLightbox" class="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Visor de imágenes" aria-hidden="true">
+    <button class="lb-close" id="lbClose" aria-label="Cerrar"><i class="bi bi-x-lg"></i></button>
+    <button class="lb-prev"  id="lbPrev"  aria-label="Imagen anterior"><i class="bi bi-chevron-left"></i></button>
+    <button class="lb-next"  id="lbNext"  aria-label="Imagen siguiente"><i class="bi bi-chevron-right"></i></button>
+    <span class="lb-counter" id="lbCounter"></span>
+    <div class="lb-img-wrap">
+      <img id="lbImg" src="" alt="">
+      <p class="lb-caption" id="lbCaption"></p>
     </div>
-
-    <!-- Carrusel custom (sin Bootstrap.Carousel) -->
-    <div id="ncCarousel" style="position:relative;border-radius:1rem;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.13);user-select:none;">
-
-      <!-- Pista de imágenes -->
-      <div id="ncTrack" style="display:flex;height:420px;transition:transform .55s cubic-bezier(.25,.46,.45,.94);">
-        <div style="min-width:100%;flex-shrink:0;position:relative;">
-          <img src="assets/img/centro/recepcion-principal.jpg" style="width:100%;height:420px;object-fit:cover;" alt="Recepción principal">
-          <span style="position:absolute;bottom:1.4rem;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.52);color:#fff;padding:.3rem 1.1rem;border-radius:.5rem;font-size:.83rem;font-weight:600;white-space:nowrap;">Recepción principal</span>
-        </div>
-        <div style="min-width:100%;flex-shrink:0;position:relative;">
-          <img src="assets/img/centro/sala-espera-principal.jpg" style="width:100%;height:420px;object-fit:cover;" alt="Sala de espera">
-          <span style="position:absolute;bottom:1.4rem;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.52);color:#fff;padding:.3rem 1.1rem;border-radius:.5rem;font-size:.83rem;font-weight:600;white-space:nowrap;">Sala de espera</span>
-        </div>
-        <div style="min-width:100%;flex-shrink:0;position:relative;">
-          <img src="assets/img/centro/sala-kinesiologia.jpg" style="width:100%;height:420px;object-fit:cover;" alt="Sala de kinesiología">
-          <span style="position:absolute;bottom:1.4rem;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.52);color:#fff;padding:.3rem 1.1rem;border-radius:.5rem;font-size:.83rem;font-weight:600;white-space:nowrap;">Sala de kinesiología</span>
-        </div>
-        <div style="min-width:100%;flex-shrink:0;position:relative;">
-          <img src="assets/img/centro/sala-integracion-sensorial.jpg" style="width:100%;height:420px;object-fit:cover;" alt="Sala de integración sensorial">
-          <span style="position:absolute;bottom:1.4rem;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.52);color:#fff;padding:.3rem 1.1rem;border-radius:.5rem;font-size:.83rem;font-weight:600;white-space:nowrap;">Sala de integración sensorial</span>
-        </div>
-        <div style="min-width:100%;flex-shrink:0;position:relative;">
-          <img src="assets/img/centro/consultorio-medico.jpg" style="width:100%;height:420px;object-fit:cover;" alt="Consultorio médico">
-          <span style="position:absolute;bottom:1.4rem;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.52);color:#fff;padding:.3rem 1.1rem;border-radius:.5rem;font-size:.83rem;font-weight:600;white-space:nowrap;">Consultorio médico</span>
-        </div>
-        <div style="min-width:100%;flex-shrink:0;position:relative;">
-          <img src="assets/img/centro/sala-psicologia-1.jpg" style="width:100%;height:420px;object-fit:cover;" alt="Sala de psicología">
-          <span style="position:absolute;bottom:1.4rem;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.52);color:#fff;padding:.3rem 1.1rem;border-radius:.5rem;font-size:.83rem;font-weight:600;white-space:nowrap;">Sala de psicología</span>
-        </div>
-        <div style="min-width:100%;flex-shrink:0;position:relative;">
-          <img src="assets/img/centro/sala-to.jpg" style="width:100%;height:420px;object-fit:cover;" alt="Sala de terapia ocupacional">
-          <span style="position:absolute;bottom:1.4rem;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.52);color:#fff;padding:.3rem 1.1rem;border-radius:.5rem;font-size:.83rem;font-weight:600;white-space:nowrap;">Sala de terapia ocupacional</span>
-        </div>
-        <div style="min-width:100%;flex-shrink:0;position:relative;">
-          <img src="assets/img/centro/fachada.jpg" style="width:100%;height:420px;object-fit:contain;background:#1c1c1c;" alt="Fachada del centro">
-          <span style="position:absolute;bottom:1.4rem;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.52);color:#fff;padding:.3rem 1.1rem;border-radius:.5rem;font-size:.83rem;font-weight:600;white-space:nowrap;">Nuestras instalaciones</span>
-        </div>
-      </div>
-
-      <!-- Botón anterior -->
-      <button id="ncPrev" aria-label="Anterior"
-        style="position:absolute;top:50%;left:.9rem;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;background:rgba(0,0,0,0.42);border:none;color:#fff;font-size:1.3rem;cursor:pointer;z-index:10;display:flex;align-items:center;justify-content:center;transition:background .2s;">
-        <i class="bi bi-chevron-left"></i>
-      </button>
-
-      <!-- Botón siguiente -->
-      <button id="ncNext" aria-label="Siguiente"
-        style="position:absolute;top:50%;right:.9rem;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;background:rgba(0,0,0,0.42);border:none;color:#fff;font-size:1.3rem;cursor:pointer;z-index:10;display:flex;align-items:center;justify-content:center;transition:background .2s;">
-        <i class="bi bi-chevron-right"></i>
-      </button>
-
-      <!-- Indicadores -->
-      <div id="ncDots" style="position:absolute;bottom:.85rem;left:50%;transform:translateX(-50%);display:flex;gap:.45rem;z-index:10;">
-        <button style="width:10px;height:10px;border-radius:50%;border:2px solid rgba(255,255,255,.7);background:#fff;padding:0;cursor:pointer;transition:transform .2s,background .2s;" aria-label="Slide 1"></button>
-        <button style="width:10px;height:10px;border-radius:50%;border:2px solid rgba(255,255,255,.7);background:rgba(255,255,255,.35);padding:0;cursor:pointer;transition:transform .2s,background .2s;" aria-label="Slide 2"></button>
-        <button style="width:10px;height:10px;border-radius:50%;border:2px solid rgba(255,255,255,.7);background:rgba(255,255,255,.35);padding:0;cursor:pointer;transition:transform .2s,background .2s;" aria-label="Slide 3"></button>
-        <button style="width:10px;height:10px;border-radius:50%;border:2px solid rgba(255,255,255,.7);background:rgba(255,255,255,.35);padding:0;cursor:pointer;transition:transform .2s,background .2s;" aria-label="Slide 4"></button>
-        <button style="width:10px;height:10px;border-radius:50%;border:2px solid rgba(255,255,255,.7);background:rgba(255,255,255,.35);padding:0;cursor:pointer;transition:transform .2s,background .2s;" aria-label="Slide 5"></button>
-        <button style="width:10px;height:10px;border-radius:50%;border:2px solid rgba(255,255,255,.7);background:rgba(255,255,255,.35);padding:0;cursor:pointer;transition:transform .2s,background .2s;" aria-label="Slide 6"></button>
-        <button style="width:10px;height:10px;border-radius:50%;border:2px solid rgba(255,255,255,.7);background:rgba(255,255,255,.35);padding:0;cursor:pointer;transition:transform .2s,background .2s;" aria-label="Slide 7"></button>
-        <button style="width:10px;height:10px;border-radius:50%;border:2px solid rgba(255,255,255,.7);background:rgba(255,255,255,.35);padding:0;cursor:pointer;transition:transform .2s,background .2s;" aria-label="Slide 8"></button>
-      </div>
-
-    </div><!-- /ncCarousel -->
-
-    <script>
-    (function () {
-      var track = document.getElementById('ncTrack');
-      var dots  = document.getElementById('ncDots').querySelectorAll('button');
-      var total = dots.length;
-      var cur   = 0;
-      var timer = null;
-
-      function goTo(n) {
-        cur = ((n % total) + total) % total;
-        track.style.transform = 'translateX(-' + (cur * 100) + '%)';
-        dots.forEach(function (d, i) {
-          d.style.background   = i === cur ? '#fff' : 'rgba(255,255,255,.35)';
-          d.style.transform    = i === cur ? 'scale(1.35)' : 'scale(1)';
-        });
-      }
-
-      function resetTimer() {
-        clearInterval(timer);
-        timer = setInterval(function () { goTo(cur + 1); }, 4500);
-      }
-
-      document.getElementById('ncPrev').addEventListener('click', function () { goTo(cur - 1); resetTimer(); });
-      document.getElementById('ncNext').addEventListener('click', function () { goTo(cur + 1); resetTimer(); });
-      dots.forEach(function (d, i) { d.addEventListener('click', function () { goTo(i); resetTimer(); }); });
-
-      /* hover sobre los botones de navegación */
-      ['ncPrev','ncNext'].forEach(function(id) {
-        var btn = document.getElementById(id);
-        btn.addEventListener('mouseenter', function () { this.style.background = 'rgba(0,0,0,0.7)'; });
-        btn.addEventListener('mouseleave', function () { this.style.background = 'rgba(0,0,0,0.42)'; });
-      });
-
-      goTo(0);
-      resetTimer();
-    })();
-    </script>
-
   </div>
-</section>
 
-<!-- NUESTROS ESPACIOS -->
-<section class="py-5" style="background:var(--color-bg);">
   <div class="container">
     <div class="text-center mb-5">
       <span class="badge rounded-pill mb-2 px-3 py-2" style="background:var(--color-primary-light);color:var(--color-primary-dark);font-size:.85rem;font-weight:600;">
-        <i class="bi bi-grid-fill me-1"></i>Espacios
+        <i class="bi bi-images me-1"></i>Galería de instalaciones
       </span>
-      <h2 class="font-heading fw-bold" style="color:var(--color-primary-dark)">Nuestros espacios especializados</h2>
-      <p class="text-muted mx-auto" style="max-width:560px">Cada sala fue diseñada pensando en las necesidades de nuestros pacientes y profesionales.</p>
+      <h2 class="font-heading fw-bold" style="color:var(--color-primary-dark)">Conoce nuestros espacios</h2>
+      <p class="text-muted mx-auto mb-4" style="max-width:520px">15 espacios diseñados para el bienestar de nuestros pacientes y sus familias.</p>
+      <div class="d-flex flex-wrap gap-2 justify-content-center">
+        <button class="btn btn-sm rounded-pill btn-primary"         data-gf="all">Todas</button>
+        <button class="btn btn-sm rounded-pill btn-outline-primary" data-gf="comun">Áreas comunes</button>
+        <button class="btn btn-sm rounded-pill btn-outline-primary" data-gf="sala">Salas de atención</button>
+        <button class="btn btn-sm rounded-pill btn-outline-primary" data-gf="exterior">Exterior</button>
+      </div>
     </div>
-    <div class="row g-4">
-
-      <div class="col-sm-6 col-lg-4 fade-up">
-        <div class="card h-100 border-0 rounded-3" style="box-shadow:var(--shadow-card);overflow:hidden;">
-          <img src="assets/img/centro/recepcion-principal.jpg" class="card-img-top" alt="Recepción" style="height:200px;object-fit:cover;">
-          <div class="card-body">
-            <div class="d-flex align-items-center gap-2 mb-2">
-              <span style="background:var(--color-primary-light);color:var(--color-primary);width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;"><i class="bi bi-building"></i></span>
-              <h5 class="card-title font-heading mb-0" style="font-size:1rem;">Recepción y sala de espera</h5>
-            </div>
-            <p class="card-text small text-muted">Un ambiente cálido y acogedor para recibir a nuestros pacientes y sus familias.</p>
-          </div>
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="gallery-col" data-gcat="comun">
+        <div class="gallery-item" data-src="assets/img/centro/recepcion-principal.webp" data-caption="Recepción principal">
+          <img src="assets/img/centro/recepcion-principal.webp" alt="Recepción principal" loading="eager" width="600" height="450">
+          <div class="gallery-item-overlay"><span><i class="bi bi-zoom-in me-1"></i>Recepción principal</span></div>
         </div>
       </div>
 
-      <div class="col-sm-6 col-lg-4 fade-up">
-        <div class="card h-100 border-0 rounded-3" style="box-shadow:var(--shadow-card);overflow:hidden;">
-          <img src="assets/img/centro/sala-kinesiologia.jpg" class="card-img-top" alt="Sala de kinesiología" style="height:200px;object-fit:cover;">
-          <div class="card-body">
-            <div class="d-flex align-items-center gap-2 mb-2">
-              <span style="background:#fce7f3;color:#be185d;width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;"><i class="bi bi-activity"></i></span>
-              <h5 class="card-title font-heading mb-0" style="font-size:1rem;">Sala de kinesiología</h5>
-            </div>
-            <p class="card-text small text-muted">Equipada con máquinas de ejercicio, espejos y elementos para rehabilitación física.</p>
-          </div>
+      <div class="gallery-col" data-gcat="comun">
+        <div class="gallery-item" data-src="assets/img/centro/sala-espera-principal.webp" data-caption="Sala de espera">
+          <img src="assets/img/centro/sala-espera-principal.webp" alt="Sala de espera" loading="eager" width="600" height="450">
+          <div class="gallery-item-overlay"><span><i class="bi bi-zoom-in me-1"></i>Sala de espera</span></div>
         </div>
       </div>
 
-      <div class="col-sm-6 col-lg-4 fade-up">
-        <div class="card h-100 border-0 rounded-3" style="box-shadow:var(--shadow-card);overflow:hidden;">
-          <img src="assets/img/centro/sala-integracion-sensorial.jpg" class="card-img-top" alt="Sala de integración sensorial" style="height:200px;object-fit:cover;">
-          <div class="card-body">
-            <div class="d-flex align-items-center gap-2 mb-2">
-              <span style="background:#fef3c7;color:#d97706;width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;"><i class="bi bi-puzzle-fill"></i></span>
-              <h5 class="card-title font-heading mb-0" style="font-size:1rem;">Sala de integración sensorial</h5>
-            </div>
-            <p class="card-text small text-muted">Con columpios, pared de escala, trampolín y materiales especializados para terapia sensorial.</p>
-          </div>
+      <div class="gallery-col" data-gcat="comun">
+        <div class="gallery-item" data-src="assets/img/centro/sala-espera-ninos.webp" data-caption="Sala de espera infantil">
+          <img src="assets/img/centro/sala-espera-ninos.webp" alt="Sala de espera infantil" loading="eager" width="600" height="450">
+          <div class="gallery-item-overlay"><span><i class="bi bi-zoom-in me-1"></i>Sala de espera infantil</span></div>
         </div>
       </div>
 
-      <div class="col-sm-6 col-lg-4 fade-up">
-        <div class="card h-100 border-0 rounded-3" style="box-shadow:var(--shadow-card);overflow:hidden;">
-          <img src="assets/img/centro/consultorio-medico.jpg" class="card-img-top" alt="Consultorio médico" style="height:200px;object-fit:cover;">
-          <div class="card-body">
-            <div class="d-flex align-items-center gap-2 mb-2">
-              <span style="background:#e0e7ff;color:#4f46e5;width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;"><i class="bi bi-heart-pulse-fill"></i></span>
-              <h5 class="card-title font-heading mb-0" style="font-size:1rem;">Consultorios médicos</h5>
-            </div>
-            <p class="card-text small text-muted">Espacios privados y equipados para atención neurológica, psiquiátrica y psicológica.</p>
-          </div>
+      <div class="gallery-col" data-gcat="comun">
+        <div class="gallery-item" data-src="assets/img/centro/recepcion-amplia.webp" data-caption="Área de recepción">
+          <img src="assets/img/centro/recepcion-amplia.webp" alt="Área de recepción" loading="lazy" width="600" height="450">
+          <div class="gallery-item-overlay"><span><i class="bi bi-zoom-in me-1"></i>Área de recepción</span></div>
         </div>
       </div>
 
-      <div class="col-sm-6 col-lg-4 fade-up">
-        <div class="card h-100 border-0 rounded-3" style="box-shadow:var(--shadow-card);overflow:hidden;">
-          <img src="assets/img/centro/sala-to.jpg" class="card-img-top" alt="Sala de terapia ocupacional" style="height:200px;object-fit:cover;">
-          <div class="card-body">
-            <div class="d-flex align-items-center gap-2 mb-2">
-              <span style="background:var(--color-primary-light);color:var(--color-primary);width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;"><i class="bi bi-hand-index-thumb-fill"></i></span>
-              <h5 class="card-title font-heading mb-0" style="font-size:1rem;">Sala de terapia ocupacional</h5>
-            </div>
-            <p class="card-text small text-muted">Materiales y mobiliario adaptado para el desarrollo de habilidades funcionales en niños y adultos.</p>
-          </div>
+      <div class="gallery-col" data-gcat="sala">
+        <div class="gallery-item" data-src="assets/img/centro/sala-kinesiologia.webp" data-caption="Sala de kinesiología">
+          <img src="assets/img/centro/sala-kinesiologia.webp" alt="Sala de kinesiología" loading="lazy" width="600" height="450">
+          <div class="gallery-item-overlay"><span><i class="bi bi-zoom-in me-1"></i>Sala de kinesiología</span></div>
         </div>
       </div>
 
-      <div class="col-sm-6 col-lg-4 fade-up">
-        <div class="card h-100 border-0 rounded-3" style="box-shadow:var(--shadow-card);overflow:hidden;">
-          <img src="assets/img/centro/sala-psicologia-1.jpg" class="card-img-top" alt="Sala de psicología" style="height:200px;object-fit:cover;">
-          <div class="card-body">
-            <div class="d-flex align-items-center gap-2 mb-2">
-              <span style="background:#fce7f3;color:#9d174d;width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;"><i class="bi bi-person-heart"></i></span>
-              <h5 class="card-title font-heading mb-0" style="font-size:1rem;">Salas de psicología</h5>
-            </div>
-            <p class="card-text small text-muted">Ambientes tranquilos y confidenciales para el apoyo emocional de niños, jóvenes y adultos.</p>
-          </div>
+      <div class="gallery-col" data-gcat="sala">
+        <div class="gallery-item" data-src="assets/img/centro/sala-integracion-sensorial.webp" data-caption="Sala de integración sensorial">
+          <img src="assets/img/centro/sala-integracion-sensorial.webp" alt="Sala de integración sensorial" loading="lazy" width="600" height="450">
+          <div class="gallery-item-overlay"><span><i class="bi bi-zoom-in me-1"></i>Sala de integración sensorial</span></div>
         </div>
       </div>
 
+      <div class="gallery-col" data-gcat="sala">
+        <div class="gallery-item" data-src="assets/img/centro/consultorio-medico.webp" data-caption="Consultorio médico">
+          <img src="assets/img/centro/consultorio-medico.webp" alt="Consultorio médico" loading="lazy" width="600" height="450">
+          <div class="gallery-item-overlay"><span><i class="bi bi-zoom-in me-1"></i>Consultorio médico</span></div>
+        </div>
+      </div>
+
+      <div class="gallery-col" data-gcat="sala">
+        <div class="gallery-item" data-src="assets/img/centro/sala-psicologia-1.webp" data-caption="Sala de psicología">
+          <img src="assets/img/centro/sala-psicologia-1.webp" alt="Sala de psicología" loading="lazy" width="600" height="450">
+          <div class="gallery-item-overlay"><span><i class="bi bi-zoom-in me-1"></i>Sala de psicología</span></div>
+        </div>
+      </div>
+
+      <div class="gallery-col" data-gcat="sala">
+        <div class="gallery-item" data-src="assets/img/centro/sala-psicologia-2.webp" data-caption="Sala de psicología II">
+          <img src="assets/img/centro/sala-psicologia-2.webp" alt="Sala de psicología II" loading="lazy" width="600" height="450">
+          <div class="gallery-item-overlay"><span><i class="bi bi-zoom-in me-1"></i>Sala de psicología II</span></div>
+        </div>
+      </div>
+
+      <div class="gallery-col" data-gcat="sala">
+        <div class="gallery-item" data-src="assets/img/centro/sala-psicologia-3.webp" data-caption="Sala de psicología III">
+          <img src="assets/img/centro/sala-psicologia-3.webp" alt="Sala de psicología III" loading="lazy" width="600" height="450">
+          <div class="gallery-item-overlay"><span><i class="bi bi-zoom-in me-1"></i>Sala de psicología III</span></div>
+        </div>
+      </div>
+
+      <div class="gallery-col" data-gcat="sala">
+        <div class="gallery-item" data-src="assets/img/centro/sala-to.webp" data-caption="Sala de terapia ocupacional">
+          <img src="assets/img/centro/sala-to.webp" alt="Sala de terapia ocupacional" loading="lazy" width="600" height="450">
+          <div class="gallery-item-overlay"><span><i class="bi bi-zoom-in me-1"></i>Sala de terapia ocupacional</span></div>
+        </div>
+      </div>
+
+      <div class="gallery-col" data-gcat="sala">
+        <div class="gallery-item" data-src="assets/img/centro/sala-terapia-1.webp" data-caption="Sala de terapia">
+          <img src="assets/img/centro/sala-terapia-1.webp" alt="Sala de terapia" loading="lazy" width="600" height="450">
+          <div class="gallery-item-overlay"><span><i class="bi bi-zoom-in me-1"></i>Sala de terapia</span></div>
+        </div>
+      </div>
+
+      <div class="gallery-col" data-gcat="sala">
+        <div class="gallery-item" data-src="assets/img/centro/sala-psicopedagogia.webp" data-caption="Sala de psicopedagogía">
+          <img src="assets/img/centro/sala-psicopedagogia.webp" alt="Sala de psicopedagogía" loading="lazy" width="600" height="450">
+          <div class="gallery-item-overlay"><span><i class="bi bi-zoom-in me-1"></i>Sala de psicopedagogía</span></div>
+        </div>
+      </div>
+
+      <div class="gallery-col" data-gcat="exterior">
+        <div class="gallery-item" data-src="assets/img/centro/fachada.webp" data-caption="Fachada del centro">
+          <img src="assets/img/centro/fachada.webp" alt="Fachada del centro" loading="lazy" width="600" height="450">
+          <div class="gallery-item-overlay"><span><i class="bi bi-zoom-in me-1"></i>Fachada del centro</span></div>
+        </div>
+      </div>
+
+      <div class="gallery-col" data-gcat="exterior">
+        <div class="gallery-item" data-src="assets/img/centro/exterior-letrero.webp" data-caption="Letrero exterior">
+          <img src="assets/img/centro/exterior-letrero.webp" alt="Letrero exterior" loading="lazy" width="600" height="450">
+          <div class="gallery-item-overlay"><span><i class="bi bi-zoom-in me-1"></i>Letrero exterior</span></div>
+        </div>
+      </div>
     </div>
+
+    <script>
+    (function(){
+      var lb=document.getElementById("galleryLightbox"),
+          lbImg=document.getElementById("lbImg"),
+          lbCaption=document.getElementById("lbCaption"),
+          lbCounter=document.getElementById("lbCounter"),
+          current=0,pool=[];
+      function buildPool(){pool=Array.from(document.querySelectorAll(".gallery-col:not([style*=none]) .gallery-item"));}
+      function openLb(idx){
+        buildPool();current=((idx%pool.length)+pool.length)%pool.length;
+        lbImg.src=pool[current].dataset.src;lbImg.alt=pool[current].dataset.caption;
+        lbCaption.textContent=pool[current].dataset.caption;
+        lbCounter.textContent=(current+1)+" / "+pool.length;
+        lb.classList.add("active");lb.removeAttribute("aria-hidden");document.body.style.overflow="hidden";
+      }
+      function closeLb(){lb.classList.remove("active");lb.setAttribute("aria-hidden","true");document.body.style.overflow="";lbImg.src="";}
+      document.querySelectorAll(".gallery-item").forEach(function(item){
+        item.addEventListener("click",function(){buildPool();openLb(pool.indexOf(item));});
+        item.setAttribute("tabindex","0");item.setAttribute("role","button");
+        item.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();item.click();}});
+      });
+      document.getElementById("lbClose").addEventListener("click",closeLb);
+      document.getElementById("lbPrev").addEventListener("click",function(){openLb(current-1);});
+      document.getElementById("lbNext").addEventListener("click",function(){openLb(current+1);});
+      lb.addEventListener("click",function(e){if(e.target===lb)closeLb();});
+      document.addEventListener("keydown",function(e){
+        if(!lb.classList.contains("active"))return;
+        if(e.key==="ArrowLeft")openLb(current-1);
+        if(e.key==="ArrowRight")openLb(current+1);
+        if(e.key==="Escape")closeLb();
+      });
+      document.querySelectorAll("[data-gf]").forEach(function(btn){
+        btn.addEventListener("click",function(){
+          var cat=this.dataset.gf;
+          document.querySelectorAll("[data-gf]").forEach(function(b){
+            b.classList.toggle("btn-primary",b.dataset.gf===cat);
+            b.classList.toggle("btn-outline-primary",b.dataset.gf!==cat);
+          });
+          document.querySelectorAll(".gallery-col").forEach(function(col){
+            col.style.display=(cat==="all"||col.dataset.gcat===cat)?"":"none";
+          });
+        });
+      });
+    })();
+    </script>
   </div>
 </section>
 
@@ -365,7 +338,7 @@
     <div class="row g-4">
       <div class="col-lg-4 col-md-12">
         <div class="footer-logo-wrap mb-2">
-          <img src="assets/img/logo-transparent-original-canvas.png" alt="Centro Neurodesarrollo San Vicente" class="footer-logo">
+          <img src="assets/img/logo-transparent-original-canvas.png" alt="Centro Neurodesarrollo San Vicente" class="footer-logo" width="297" height="144">
         </div>
         <p class="small mb-3" style="max-width:280px">Equipo multidisciplinario comprometido con tu bienestar y el de tu familia.</p>
         <div class="footer-social d-flex gap-2">

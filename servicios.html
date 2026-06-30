@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="es">
+<html lang="es-CL">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,6 +51,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon/favicon-96x96.png">
   <link rel="apple-touch-icon" href="assets/img/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -81,7 +82,7 @@
 <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="mainNav">
   <div class="container">
     <a class="navbar-brand py-1" href="index.html">
-      <img src="assets/img/logo-transparent-original-canvas.png" alt="Centro Neurodesarrollo San Vicente" class="navbar-logo">
+      <img src="assets/img/logo-transparent-original-canvas.png" alt="Centro Neurodesarrollo San Vicente" class="navbar-logo" width="297" height="144">
     </a>
     <div class="navbar-brand-divider d-none d-lg-flex align-items-center"></div>
     <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Abrir menú">
@@ -337,6 +338,25 @@
             </div>
           </div>
         </div>
+        <div class="sdc-expand-wrap">
+          <button class="sdc-expand-btn" type="button" aria-expanded="false" data-sdc-target="neuro-when">
+            <i class="bi bi-chevron-down sdc-chevron"></i>¿Cuándo consultar?
+          </button>
+          <div class="sdc-detail" id="neuro-when" hidden>
+            <div class="sdc-when">
+              <h6><i class="bi bi-check-circle-fill me-1"></i>Señales para consultar</h6>
+              <ul>
+                <li>Tu hijo no cumple hitos del desarrollo (no habla, no camina) o presenta regresión</li>
+                <li>Episodios de convulsiones, desmayos o pérdida de conciencia inexplicados</li>
+                <li>Cefaleas muy frecuentes, muy intensas o que no ceden con analgésicos habituales</li>
+                <li>Hormigueo, debilidad o entumecimiento persistente en cara, brazos o piernas</li>
+              </ul>
+            </div>
+            <div class="sdc-first-visit">
+              <p><strong><i class="bi bi-calendar2-check me-1"></i>Primera consulta:</strong> ~60 min. Evaluación neurológica completa, historia clínica y solicitud de exámenes si corresponde (EEG, neuroimagen).</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -381,6 +401,26 @@
               <span class="cond-chip" style="background:#e0e7ff;color:#312e81;border-color:#c7d2fe">TOC</span>
               <span class="cond-chip" style="background:#e0e7ff;color:#312e81;border-color:#c7d2fe">Trastornos del sueño</span>
             </div>
+          </div>
+        </div>
+        <div class="sdc-expand-wrap">
+          <button class="sdc-expand-btn" type="button" aria-expanded="false" data-sdc-target="psiq-when">
+            <i class="bi bi-chevron-down sdc-chevron"></i>¿Cuándo consultar?
+          </button>
+          <div class="sdc-detail" id="psiq-when" hidden>
+            <div class="sdc-when">
+              <h6><i class="bi bi-check-circle-fill me-1"></i>Señales para consultar</h6>
+              <ul>
+                <li>Los síntomas emocionales son tan intensos que impiden funcionar en la vida diaria</li>
+                <li>Se sospecha diagnóstico que puede requerir medicación: TDAH, TEA, depresión mayor, bipolaridad</li>
+                <li>Crisis severas: ideación suicida, episodios psicóticos o manía aguda</li>
+                <li>El tratamiento psicológico no ha dado los resultados esperados tras varios meses</li>
+              </ul>
+            </div>
+            <div class="sdc-first-visit">
+              <p><strong><i class="bi bi-calendar2-check me-1"></i>Primera consulta:</strong> ~60 min. Entrevista clínica diagnóstica completa; se evalúa inicio de farmacoterapia y se coordina con el equipo de psicología.</p>
+            </div>
+            <p class="sdc-vs"><i class="bi bi-arrow-left-right me-1"></i><strong>¿Psiquiatría o Psicología?</strong> El psiquiatra es médico especialista: puede diagnosticar y recetar medicamentos. Muchas veces ambas disciplinas trabajan juntas en el mismo tratamiento. Si tienes dudas, cuéntanos tu situación y te orientamos sin costo.</p>
           </div>
         </div>
       </div>
@@ -429,6 +469,26 @@
             </div>
           </div>
         </div>
+        <div class="sdc-expand-wrap">
+          <button class="sdc-expand-btn" type="button" aria-expanded="false" data-sdc-target="psico-when">
+            <i class="bi bi-chevron-down sdc-chevron"></i>¿Cuándo consultar?
+          </button>
+          <div class="sdc-detail" id="psico-when" hidden>
+            <div class="sdc-when">
+              <h6><i class="bi bi-check-circle-fill me-1"></i>Señales para consultar</h6>
+              <ul>
+                <li>Te sientes ansioso, triste o muy estresado de forma persistente, pero sin crisis severa</li>
+                <li>Tu hijo presenta conductas difíciles, miedos intensos o rabietas que te preocupan</li>
+                <li>Atraviesas un cambio vital difícil: duelo, separación, estrés laboral o conflicto de pareja</li>
+                <li>Quieres mejorar tu bienestar, tu autoestima o la dinámica familiar</li>
+              </ul>
+            </div>
+            <div class="sdc-first-visit">
+              <p><strong><i class="bi bi-calendar2-check me-1"></i>Primera consulta:</strong> ~50 min. Entrevista inicial para conocer tu situación, establecer vínculo terapéutico y definir los objetivos del proceso.</p>
+            </div>
+            <p class="sdc-vs"><i class="bi bi-arrow-left-right me-1"></i><strong>¿Psicología o Psiquiatría?</strong> La psicología trabaja a través de la conversación y técnicas conductuales, sin medicación. Si el equipo detecta que también se requiere evaluación farmacológica, coordinará con psiquiatría de forma fluida dentro del centro.</p>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -472,6 +532,25 @@
               <span class="cond-chip" style="background:#d1fae5;color:#065f46;border-color:#6ee7b7">Alimentación infantil</span>
               <span class="cond-chip" style="background:#d1fae5;color:#065f46;border-color:#6ee7b7">Trastornos alimentarios</span>
               <span class="cond-chip" style="background:#d1fae5;color:#065f46;border-color:#6ee7b7">Nutrición en el deporte</span>
+            </div>
+          </div>
+        </div>
+        <div class="sdc-expand-wrap">
+          <button class="sdc-expand-btn" type="button" aria-expanded="false" data-sdc-target="nutri-when">
+            <i class="bi bi-chevron-down sdc-chevron"></i>¿Cuándo consultar?
+          </button>
+          <div class="sdc-detail" id="nutri-when" hidden>
+            <div class="sdc-when">
+              <h6><i class="bi bi-check-circle-fill me-1"></i>Señales para consultar</h6>
+              <ul>
+                <li>Tu peso o el de tu hijo se aleja del rango saludable a pesar de intentos propios</li>
+                <li>Tienes diabetes, hipertensión o colesterol alto y quieres mejorar con la alimentación</li>
+                <li>Tu hijo es muy selectivo con la comida o rechaza grupos de alimentos completos</li>
+                <li>Sientes cansancio, falta de energía o malestar que puede relacionarse con la dieta</li>
+              </ul>
+            </div>
+            <div class="sdc-first-visit">
+              <p><strong><i class="bi bi-calendar2-check me-1"></i>Primera consulta:</strong> ~50 min. Anamnesis nutricional, medición antropométrica, análisis de hábitos y entrega del plan alimentario inicial.</p>
             </div>
           </div>
         </div>
@@ -520,6 +599,25 @@
             </div>
           </div>
         </div>
+        <div class="sdc-expand-wrap">
+          <button class="sdc-expand-btn" type="button" aria-expanded="false" data-sdc-target="med-when">
+            <i class="bi bi-chevron-down sdc-chevron"></i>¿Cuándo consultar?
+          </button>
+          <div class="sdc-detail" id="med-when" hidden>
+            <div class="sdc-when">
+              <h6><i class="bi bi-check-circle-fill me-1"></i>Señales para consultar</h6>
+              <ul>
+                <li>No has tenido un control de salud preventivo en más de un año</li>
+                <li>Tienes un síntoma nuevo y no sabes a qué especialista acudir</li>
+                <li>Necesitas renovar medicamentos o solicitar exámenes de laboratorio</li>
+                <li>Quieres una evaluación general antes de decidir si ir a un especialista</li>
+              </ul>
+            </div>
+            <div class="sdc-first-visit">
+              <p><strong><i class="bi bi-calendar2-check me-1"></i>Primera consulta:</strong> ~40 min. Evaluación general de salud, revisión de antecedentes y orientación diagnóstica o derivación oportuna al especialista.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -561,6 +659,25 @@
               <span class="cond-chip" style="background:#fef3c7;color:#92400e;border-color:#fde68a">TDAH escolar</span>
               <span class="cond-chip" style="background:#fef3c7;color:#92400e;border-color:#fde68a">Bajo rendimiento</span>
               <span class="cond-chip" style="background:#fef3c7;color:#92400e;border-color:#fde68a">Evaluación para certificación</span>
+            </div>
+          </div>
+        </div>
+        <div class="sdc-expand-wrap">
+          <button class="sdc-expand-btn" type="button" aria-expanded="false" data-sdc-target="psicoped-when">
+            <i class="bi bi-chevron-down sdc-chevron"></i>¿Cuándo consultar?
+          </button>
+          <div class="sdc-detail" id="psicoped-when" hidden>
+            <div class="sdc-when">
+              <h6><i class="bi bi-check-circle-fill me-1"></i>Señales para consultar</h6>
+              <ul>
+                <li>Tu hijo tiene notas bajas pero no hay un problema intelectual evidente</li>
+                <li>Lee con mucha dificultad, confunde letras o no comprende lo que lee</li>
+                <li>El colegio sugirió evaluación, o tiene un PIE activo que no está dando resultados</li>
+                <li>Presenta rechazo escolar marcado o frustración intensa frente a las tareas</li>
+              </ul>
+            </div>
+            <div class="sdc-first-visit">
+              <p><strong><i class="bi bi-calendar2-check me-1"></i>Primera consulta:</strong> ~60 min. Entrevista con padres y evaluación inicial del niño; se programa la batería de evaluación completa y el cronograma de intervención.</p>
             </div>
           </div>
         </div>
@@ -610,6 +727,25 @@
             </div>
           </div>
         </div>
+        <div class="sdc-expand-wrap">
+          <button class="sdc-expand-btn" type="button" aria-expanded="false" data-sdc-target="fono-when">
+            <i class="bi bi-chevron-down sdc-chevron"></i>¿Cuándo consultar?
+          </button>
+          <div class="sdc-detail" id="fono-when" hidden>
+            <div class="sdc-when">
+              <h6><i class="bi bi-check-circle-fill me-1"></i>Señales para consultar</h6>
+              <ul>
+                <li>Tu bebé de 12 meses no balbucea, no señala o no responde a su nombre</li>
+                <li>Tu hijo de 2 años aún no dice palabras o tiene un vocabulario muy limitado</li>
+                <li>A los 3 años habla, pero fuera de la familia nadie le entiende</li>
+                <li>Notas cambios en la voz (ronquera) que persisten más de 2 semanas, o dificultad para tragar</li>
+              </ul>
+            </div>
+            <div class="sdc-first-visit">
+              <p><strong><i class="bi bi-calendar2-check me-1"></i>Primera consulta:</strong> ~50 min. Evaluación del lenguaje, habla y comunicación; orientación a padres y definición del plan de tratamiento.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -651,6 +787,25 @@
               <span class="cond-chip" style="background:#ccfbf1;color:#134e4a;border-color:#99f6e4">Torpeza motora</span>
               <span class="cond-chip" style="background:#ccfbf1;color:#134e4a;border-color:#99f6e4">Rehabilitación postoperatoria</span>
               <span class="cond-chip" style="background:#ccfbf1;color:#134e4a;border-color:#99f6e4">Discapacidad funcional</span>
+            </div>
+          </div>
+        </div>
+        <div class="sdc-expand-wrap">
+          <button class="sdc-expand-btn" type="button" aria-expanded="false" data-sdc-target="to-when">
+            <i class="bi bi-chevron-down sdc-chevron"></i>¿Cuándo consultar?
+          </button>
+          <div class="sdc-detail" id="to-when" hidden>
+            <div class="sdc-when">
+              <h6><i class="bi bi-check-circle-fill me-1"></i>Señales para consultar</h6>
+              <ul>
+                <li>Tu hijo rechaza texturas, sonidos o el contacto físico de forma muy intensa (hipersensibilidad sensorial)</li>
+                <li>Tiene dificultades con actividades básicas: vestirse, usar cubiertos, abrocharse botones</li>
+                <li>Presenta torpeza motora frecuente, cae con facilidad o evita actividades físicas</li>
+                <li>Adulto: pérdida de funcionalidad tras ACV, lesión grave u hospitalización prolongada</li>
+              </ul>
+            </div>
+            <div class="sdc-first-visit">
+              <p><strong><i class="bi bi-calendar2-check me-1"></i>Primera consulta:</strong> ~60 min. Evaluación de integración sensorial, motricidad y actividades de la vida diaria; observación lúdica en niños y definición del plan.</p>
             </div>
           </div>
         </div>
@@ -699,6 +854,25 @@
             </div>
           </div>
         </div>
+        <div class="sdc-expand-wrap">
+          <button class="sdc-expand-btn" type="button" aria-expanded="false" data-sdc-target="kine-when">
+            <i class="bi bi-chevron-down sdc-chevron"></i>¿Cuándo consultar?
+          </button>
+          <div class="sdc-detail" id="kine-when" hidden>
+            <div class="sdc-when">
+              <h6><i class="bi bi-check-circle-fill me-1"></i>Señales para consultar</h6>
+              <ul>
+                <li>Llevas más de 2 semanas con dolor muscular o articular que no mejora con reposo</li>
+                <li>Estás recuperándote de una cirugía, fractura o lesión deportiva</li>
+                <li>Tienes dolor de espalda o cuello recurrente que interfiere con tu trabajo o sueño</li>
+                <li>Adulto mayor: miedo a caer, pérdida de equilibrio o dificultades para caminar</li>
+              </ul>
+            </div>
+            <div class="sdc-first-visit">
+              <p><strong><i class="bi bi-calendar2-check me-1"></i>Primera consulta:</strong> ~50 min. Evaluación postural y funcional, diagnóstico kinesiológico y diseño del plan de tratamiento personalizado.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -739,6 +913,25 @@
               <span class="cond-chip" style="background:#fce7f3;color:#831843;border-color:#fbcfe8">Material didáctico adaptado</span>
               <span class="cond-chip" style="background:#fce7f3;color:#831843;border-color:#fbcfe8">Asesoría a docentes</span>
               <span class="cond-chip" style="background:#fce7f3;color:#831843;border-color:#fbcfe8">Coordinación escuela-centro</span>
+            </div>
+          </div>
+        </div>
+        <div class="sdc-expand-wrap">
+          <button class="sdc-expand-btn" type="button" aria-expanded="false" data-sdc-target="curricula-when">
+            <i class="bi bi-chevron-down sdc-chevron"></i>¿Cuándo consultar?
+          </button>
+          <div class="sdc-detail" id="curricula-when" hidden>
+            <div class="sdc-when">
+              <h6><i class="bi bi-check-circle-fill me-1"></i>Señales para consultar</h6>
+              <ul>
+                <li>Tu hijo tiene diagnóstico de NEE pero sin adaptaciones curriculares formalizadas</li>
+                <li>El colegio aplica el PIE y quieres coordinarlo con la intervención del centro</li>
+                <li>Existe una brecha clara entre la capacidad de tu hijo y los contenidos del curso</li>
+                <li>El equipo docente necesita orientación específica para adaptar el aprendizaje</li>
+              </ul>
+            </div>
+            <div class="sdc-first-visit">
+              <p><strong><i class="bi bi-calendar2-check me-1"></i>Primera consulta:</strong> ~60 min. Revisión de informes previos, entrevista con padres y evaluación curricular inicial del estudiante.</p>
             </div>
           </div>
         </div>
@@ -830,7 +1023,7 @@
     <div class="row g-4">
       <div class="col-lg-4 col-md-12">
         <div class="footer-logo-wrap mb-2">
-          <img src="assets/img/logo-transparent-original-canvas.png" alt="Centro Neurodesarrollo San Vicente" class="footer-logo">
+          <img src="assets/img/logo-transparent-original-canvas.png" alt="Centro Neurodesarrollo San Vicente" class="footer-logo" width="297" height="144">
         </div>
         <p class="small mb-3" style="max-width:280px">Equipo multidisciplinario comprometido con tu bienestar y el de tu familia.</p>
         <div class="footer-social d-flex gap-2">
@@ -893,5 +1086,18 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc4s9bIOgUxi8T/jzmJHD0enk1f8r0+86C18cC+a7N6" crossorigin="anonymous"></script>
 <script src="js/main.js"></script>
+<script>
+(function(){
+  document.querySelectorAll('.sdc-expand-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var panel = document.getElementById(this.getAttribute('data-sdc-target'));
+      var isOpen = !panel.hidden;
+      panel.hidden = isOpen;
+      this.setAttribute('aria-expanded', String(!isOpen));
+    });
+  });
+})();
+</script>
+
 </body>
 </html>
